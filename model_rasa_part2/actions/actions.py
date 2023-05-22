@@ -27,7 +27,6 @@ class contextAction(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            print("$$$$$$$$$$$$$$$$$$$$$$","action_context_set")
 
             full_message = tracker.latest_message['text']
             both_info = extraction_info(full_message)
@@ -39,7 +38,7 @@ class contextAction(Action):
             cityCode = location_coder(city)
 
             if broadway_show==None and city==None:
-                print("###############  first condition worked")
+               
                 if pre_broadway_show==None and preCity==None:
                     dispatcher.utter_message(text="for which show and in which city")
                 elif pre_broadway_show!=None and preCity==None:
@@ -114,7 +113,7 @@ class contextAction(Action):
 
                        
             elif broadway_show!=None and city==None:
-                print("############################  second condition worked")
+                
                 if preCity==None:
                     try:
                         reply = regionalTable(full_message,broadway_show,preCity)
@@ -153,7 +152,7 @@ class contextAction(Action):
                 return [SlotSet("broadway_name", broadway_show)]
 
             elif broadway_show==None and city!=None:
-                print("######################## third condition worked")
+                
                 if pre_broadway_show==None:
                     if cityCode == "('LN','WE')" or cityCode =="('NY','OF','FF','BR')" or cityCode in ["('LN')", "('WE')", "('BR')", "('NY')", "('OF')", "('FF')", "('LA')"]:
                         reply = productionTable(full_message,broadway_show,cityCode,city)
@@ -247,7 +246,7 @@ class actionFacts(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("$$$$$$$$$$$$$$$$$$$$$$","action_about_facts")
+        
         try:
             full_message = tracker.latest_message['text']
             print(full_message)
@@ -282,7 +281,7 @@ class ActionSetCityName(Action):
     def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[Dict[Text, Any]]:
-        print("$$$$$$$$$$$$$$$$$$$$$$","action_city")
+        
         full_message = tracker.latest_message['text']
         broadway_show = tracker.get_slot("broadway_name")
         city = extraction_info(full_message)[1]
@@ -307,7 +306,7 @@ class ActionSuggest(Action):
     async def run(
             self,dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any],
         ) -> List[Dict[Text, Any]]:
-        print("$$$$$$$$$$$$$$$$$$$$$$","action_suggest_show")
+        
         
         broadway_shows = tracker.get_slot("broadway_name")
 
@@ -327,7 +326,7 @@ class ActionSetName(Action):
     def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[Dict[Text, Any]]:
-        print("$$$$$$$$$$$$$$$$$$$$$$","action_my_name")
+        
         full_message = tracker.latest_message['text']
         prompt = f"just return person's name from text\ntext: {full_message}"
         name = openFunction(prompt)
@@ -343,7 +342,7 @@ class ActionFallback(Action):
     def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[Dict[Text, Any]]:
-        print("$$$$$$$$$$$$$$$$$$$$$$","action_fallback")
+        
 
         pre_broadway_show = tracker.get_slot("broadway_name")
         preCity = tracker.get_slot("place")

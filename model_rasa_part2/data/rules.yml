@@ -1,0 +1,74 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps: 
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: context rule
+  steps:
+  - intent: context_setter
+  - action: action_context_set
+
+- rule: facts asked
+  steps:
+  - intent: facts
+  - action: action_about_facts
+
+- rule: suggested
+  steps:
+  - intent: suggetions
+  - action: action_suggest_show
+
+- rule: my_name_rule
+  steps:
+  - intent: name  
+  - action: action_my_name
+
+
+- rule: equity_jobs_rule
+  steps:
+  - intent: equity_jobs
+  - action: utter_equity_jobs
+
+- rule: non_equity_jobs_rule
+  steps:
+  - intent: non_equity_jobs
+  - action: utter_non_equity_jobs
+
+- rule: industry_jobs_rule
+  steps:
+  - intent: industry_jobs
+  - action: utter_industry_jobs
+
+- rule: add job story
+  steps:
+  - intent: add_job
+  - action: utter_add_job
+
+- rule: location rule
+  steps:
+  - intent: location
+  - action: action_city
+
+- rule: out-of-scope rule
+  steps:
+  - intent: nlu_fallback
+  - action: action_fallback
+
+- rule: Handle out of scope messages
+  steps:
+  - intent: out_of_scope
+  - action: action_fallback
+
+- rule: always reply on thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks

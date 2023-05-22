@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-broadway_name",
+      "2": "I-broadway_name",
+      "3": "L-broadway_name",
+      "4": "U-broadway_name",
+      "5": "B-movie name",
+      "6": "I-movie name",
+      "7": "L-movie name",
+      "8": "U-movie name",
+      "9": "B-place",
+      "10": "I-place",
+      "11": "L-place",
+      "12": "U-place",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-broadway_name": 1,
+      "I-broadway_name": 2,
+      "L-broadway_name": 3,
+      "U-broadway_name": 4,
+      "B-movie name": 5,
+      "I-movie name": 6,
+      "L-movie name": 7,
+      "U-movie name": 8,
+      "B-place": 9,
+      "I-place": 10,
+      "L-place": 11,
+      "U-place": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

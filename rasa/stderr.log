@@ -1,0 +1,2204 @@
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 9, in <module>
+    application = wsgi.app.py
+AttributeError: 'Flask' object has no attribute 'py'
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 9, in <module>
+    application = wsgi.app.py
+AttributeError: 'Flask' object has no attribute 'py'
+[UID:1750][3623691] Child process with pid: 3623714 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 9, in <module>
+    application = wsgi.app.py
+AttributeError: 'Flask' object has no attribute 'py'
+[UID:1750][3623691] Child process with pid: 3626924 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 9, in <module>
+    application = wsgi.app.py
+AttributeError: 'Flask' object has no attribute 'py'
+[UID:1750][3623691] Child process with pid: 3626939 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 9, in <module>
+    application = wsgi.app.py
+AttributeError: 'Flask' object has no attribute 'py'
+[UID:1750][3623691] Child process with pid: 3626964 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 9, in <module>
+    application = wsgi.app.py
+AttributeError: 'Flask' object has no attribute 'py'
+[UID:1750][3623691] Child process with pid: 3627033 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 9, in <module>
+    application = wsgi.app.py
+AttributeError: 'Flask' object has no attribute 'py'
+[UID:1750][3623691] Child process with pid: 3627138 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 9, in <module>
+    application = wsgi.app.py
+AttributeError: 'Flask' object has no attribute 'py'
+[UID:1750][3623691] Child process with pid: 3635631 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1754724] Child process with pid: 1754748 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1754724] Child process with pid: 1754827 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1754724] Child process with pid: 1756208 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1754724] Child process with pid: 1756298 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1754724] Child process with pid: 1756344 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1777236] Child process with pid: 1777307 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1777236] Child process with pid: 1778268 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1777236] Child process with pid: 1778321 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1777236] Child process with pid: 1778612 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1777236] Child process with pid: 1778635 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1777236] Child process with pid: 1779774 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1777236] Child process with pid: 1779818 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1804239] Child process with pid: 1804267 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1804239] Child process with pid: 1805704 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python310/lib64/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "app.py", line 8
+    def passenger_wsgi.py (environ, start_response):
+                      ^
+SyntaxError: invalid syntax
+[UID:1750][1804239] Child process with pid: 1805714 was killed by signal: 15, core dumped: no
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 8: cd: /home/abriella/virtualenv/conversationapi/3.10: No such file or directory
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 9: /home/abriella/virtualenv/conversationapi/3.10/bin/set_env_vars.py: No such file or directory
+Python path configuration:
+  PYTHONHOME = '/home/abriella/virtualenv/conversationapi/3.10'
+  PYTHONPATH = '.:/home/abriella/conversationapi/'
+  program name = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  sys.base_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.base_exec_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.platlibdir = 'lib64'
+  sys.executable = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  sys.prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.exec_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.path = [
+    '.',
+    '/home/abriella/conversationapi/',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python39.zip',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python3.9',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python3.9/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fc626c02740 (most recent call first):
+<no Python frame>
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 8: cd: /home/abriella/virtualenv/conversationapi/3.10: No such file or directory
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 9: /home/abriella/virtualenv/conversationapi/3.10/bin/set_env_vars.py: No such file or directory
+Python path configuration:
+  PYTHONHOME = '/home/abriella/virtualenv/conversationapi/3.10'
+  PYTHONPATH = '.:/home/abriella/conversationapi/'
+  program name = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  sys.base_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.base_exec_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.platlibdir = 'lib64'
+  sys.executable = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  sys.prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.exec_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.path = [
+    '.',
+    '/home/abriella/conversationapi/',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python39.zip',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python3.9',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python3.9/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007f0a89137740 (most recent call first):
+<no Python frame>
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 8: cd: /home/abriella/virtualenv/conversationapi/3.10: No such file or directory
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 9: /home/abriella/virtualenv/conversationapi/3.10/bin/set_env_vars.py: No such file or directory
+Python path configuration:
+  PYTHONHOME = '/home/abriella/virtualenv/conversationapi/3.10'
+  PYTHONPATH = '.:/home/abriella/conversationapi/'
+  program name = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  sys.base_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.base_exec_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.platlibdir = 'lib64'
+  sys.executable = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  sys.prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.exec_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.path = [
+    '.',
+    '/home/abriella/conversationapi/',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python39.zip',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python3.9',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python3.9/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007f56b3113740 (most recent call first):
+<no Python frame>
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 8: cd: /home/abriella/virtualenv/conversationapi/3.10: No such file or directory
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 9: /home/abriella/virtualenv/conversationapi/3.10/bin/set_env_vars.py: No such file or directory
+Python path configuration:
+  PYTHONHOME = '/home/abriella/virtualenv/conversationapi/3.10'
+  PYTHONPATH = '.:/home/abriella/conversationapi/'
+  program name = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  sys.base_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.base_exec_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.platlibdir = 'lib64'
+  sys.executable = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  sys.prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.exec_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.path = [
+    '.',
+    '/home/abriella/conversationapi/',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python39.zip',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python3.9',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python3.9/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fb8acade740 (most recent call first):
+<no Python frame>
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 8: cd: /home/abriella/virtualenv/conversationapi/3.10: No such file or directory
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 9: /home/abriella/virtualenv/conversationapi/3.10/bin/set_env_vars.py: No such file or directory
+Python path configuration:
+  PYTHONHOME = '/home/abriella/virtualenv/conversationapi/3.10'
+  PYTHONPATH = '.:/home/abriella/conversationapi/'
+  program name = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  sys.base_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.base_exec_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.platlibdir = 'lib64'
+  sys.executable = '/home/abriella/virtualenv/conversationapi/3.9/bin/python'
+  sys.prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.exec_prefix = '/home/abriella/virtualenv/conversationapi/3.10'
+  sys.path = [
+    '.',
+    '/home/abriella/conversationapi/',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python39.zip',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python3.9',
+    '/home/abriella/virtualenv/conversationapi/3.10/lib64/python3.9/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fbeb3528740 (most recent call first):
+<no Python frame>
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 8: cd: /home/abriella/virtualenv/conversationapi/3.10: No such file or directory
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 9: /home/abriella/virtualenv/conversationapi/3.10/bin/set_env_vars.py: No such file or directory
+ImportError: No module named site
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 8: cd: /home/abriella/virtualenv/conversationapi/3.10: No such file or directory
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 9: /home/abriella/virtualenv/conversationapi/3.10/bin/set_env_vars.py: No such file or directory
+ImportError: No module named site
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 8: cd: /home/abriella/virtualenv/conversationapi/3.10: No such file or directory
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 9: /home/abriella/virtualenv/conversationapi/3.10/bin/set_env_vars.py: No such file or directory
+ImportError: No module named site
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 8: cd: /home/abriella/virtualenv/conversationapi/3.10: No such file or directory
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 9: /home/abriella/virtualenv/conversationapi/3.10/bin/set_env_vars.py: No such file or directory
+ImportError: No module named site
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 8: cd: /home/abriella/virtualenv/conversationapi/3.10: No such file or directory
+/usr/local/lsws/fcgi-bin/lswsgi_wrapper: line 9: /home/abriella/virtualenv/conversationapi/3.10/bin/set_env_vars.py: No such file or directory
+ImportError: No module named site
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 14
+    return render_template('index.html', val=val)
+                                                 ^
+IndentationError: unindent does not match any outer indentation level
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 14
+    return render_template('index.html', val=val)
+                                                 ^
+IndentationError: unindent does not match any outer indentation level
+[UID:1750][4003947] Child process with pid: 4003996 was killed by signal: 15, core dumped: no
+[2023-03-02 13:39:09,369] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:39:14,735] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:39:16,986] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:39:18,073] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:40:24,067] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:40:25,639] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:40:26,012] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:40:26,532] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:40:26,979] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:40:27,302] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:41:18,750] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:42:23,208] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:42:35,047] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:42:37,296] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:42:37,298] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:42:37,339] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 25, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:43:12,895] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:43:23,786] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:43:24,690] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:43:25,037] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:43:25,362] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:43:25,683] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:43:26,025] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:43:26,338] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:43:26,675] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:43:26,989] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:44:12,630] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:44:23,320] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:44:24,249] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:44:24,585] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:44:24,921] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:45:44,120] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:45:45,490] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:46:38,009] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:46:39,457] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:46:40,663] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:46:41,486] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:46:42,653] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:47:03,636] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:47:04,732] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:47:06,929] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:47:08,243] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:47:19,552] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:47:21,432] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+[2023-03-02 13:47:40,207] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 16, in index
+    return render_template('index.html', val=val)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/abriella/conversationapi/Template/index.html", line 155, in top-level template code
+    url : "{{url_for('rasa_reponse')}}",
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ''. Did you mean 'static' instead?
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 32
+    application = app
+    ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 32
+    application = app
+    ^
+SyntaxError: invalid syntax
+[UID:1750][4060127] Child process with pid: 4060177 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 32
+    application = app
+    ^
+SyntaxError: invalid syntax
+[UID:1750][4060127] Child process with pid: 4060457 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 32
+    application = app
+    ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 32
+    application = app
+    ^
+SyntaxError: invalid syntax
+[UID:1750][4061251] Child process with pid: 4061266 was killed by signal: 15, core dumped: no
+[2023-03-03 06:28:14,307] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 17, in index
+    if val != NONE:
+NameError: name 'NONE' is not defined
+[2023-03-03 06:28:16,019] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 17, in index
+    if val != NONE:
+NameError: name 'NONE' is not defined
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 17
+    if val != '' && val != None:
+                  ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 17
+    if val != '' && val != None:
+                  ^
+SyntaxError: invalid syntax
+[UID:1750][1332243] Child process with pid: 1332297 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 17
+    if val != '' && val != None:
+                  ^
+SyntaxError: invalid syntax
+[UID:1750][1332243] Child process with pid: 1332376 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 25
+    else:
+         ^
+IndentationError: unindent does not match any outer indentation level
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 25
+    else:
+         ^
+IndentationError: unindent does not match any outer indentation level
+[UID:1750][1335766] Child process with pid: 1335778 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 25
+    else:
+         ^
+IndentationError: unindent does not match any outer indentation level
+[UID:1750][1335766] Child process with pid: 1335810 was killed by signal: 15, core dumped: no
+Traceback (most recent call last):
+  File "/home/abriella/conversationapi/passenger_wsgi.py", line 8, in <module>
+    wsgi = imp.load_source('wsgi', 'app.py')
+  File "/opt/alt/python39/lib64/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "app.py", line 25
+    else:
+         ^
+IndentationError: unindent does not match any outer indentation level
+[UID:1750][1335766] Child process with pid: 1335833 was killed by signal: 15, core dumped: no
+[2023-03-03 11:49:01,608] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/opt/alt/python39/lib64/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/opt/alt/python39/lib64/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/opt/alt/python39/lib64/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/opt/alt/python39/lib64/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/opt/alt/python39/lib64/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc8a1aef130>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5005): Max retries exceeded with url: /webhooks/rest/webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc8a1aef130>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 20, in index
+    res = requests.post('http://localhost:5005/webhooks/rest/webhook', data= data, headers = headers)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/abriella/virtualenv/conversationapi/3.9/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5005): Max retries exceeded with url: /webhooks/rest/webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fc8a1aef130>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[{'recipient_id': 'Rasa', 'text': 'Hi there. How are you feeling today?'}]
+[{'recipient_id': 'Rasa', 'text': 'Hi there. How are you feeling today?'}]
+[{'recipient_id': 'Rasa', 'text': 'Great to see you. How do you feel currently?'}]
+[{'recipient_id': 'Rasa', 'text': 'Tell me more about it.'}]
+[{'recipient_id': 'Rasa', 'text': 'Oh I see. Tell me more'}]
+[{'recipient_id': 'Rasa', 'text': "I'm here for you. Could you tell me why you're feeling this way?"}]
+[{'recipient_id': 'Rasa', 'text': "I'm listening. Tell me more."}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': 'Tell me more about it.'}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': 'Great to see you. How do you feel currently?'}]
+[{'recipient_id': 'Rasa', 'text': 'Oh I see. Tell me more'}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': 'Hi there. How are you feeling today?'}]
+[{'recipient_id': 'Rasa', 'text': 'Oh I see. Tell me more'}]
+[{'recipient_id': 'Rasa', 'text': 'Hi there. How are you feeling today?'}]
+[{'recipient_id': 'Rasa', 'text': 'Oh I see. Tell me more'}]
+[{'recipient_id': 'Rasa', 'text': 'Any time!'}]
+[{'recipient_id': 'Rasa', 'text': 'See you later.'}]
+[{'recipient_id': 'Rasa', 'text': "Hello there. Glad to see you're back. What's going on in your world right now?"}]
+[{'recipient_id': 'Rasa', 'text': 'Oh I see. Tell me more'}]
+[{'recipient_id': 'Rasa', 'text': 'Hi there. What brings you here today?'}]
+[{'recipient_id': 'Rasa', 'text': 'Did something happen which made you feel this way?'}]
+[{'recipient_id': 'Rasa', 'text': 'I see. Have you taken any approaches to not feel this way?'}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': 'Tell me more about it.'}]
+[{'recipient_id': 'Rasa', 'text': 'Oh I see. Tell me more'}]
+[{'recipient_id': 'Rasa', 'text': 'Hi there. How are you feeling today?'}]
+[{'recipient_id': 'Rasa', 'text': 'How long have you been feeling this way?'}]
+[{'recipient_id': 'Rasa', 'text': "I'm listening. Tell me more."}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': 'Hi there. What brings you here today?'}]
+[{'recipient_id': 'Rasa', 'text': "Oh I see. That's great."}]
+[{'recipient_id': 'Rasa', 'text': "I'm listening. Tell me more."}]
+[{'recipient_id': 'Rasa', 'text': "I'm listening. Tell me more."}]
+[{'recipient_id': 'Rasa', 'text': "I'm sorry to hear that. I'm here for you. Talking about it might help. So, tell me why do you think you're feeling this way?"}]
+[{'recipient_id': 'Rasa', 'text': 'What do you think is causing this?'}]
+[{'recipient_id': 'Rasa', 'text': 'Why do you think so?'}]
+[{'recipient_id': 'Rasa', 'text': 'Call me CBT'}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': 'Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices.'}]
+[{'recipient_id': 'Rasa', 'text': 'Tell me more about it.'}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': 'Tell me more about it.'}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': "I'm listening. Tell me more."}]
+[{'recipient_id': 'Rasa', 'text': "I'm listening. Tell me more."}]
+[{'recipient_id': 'Rasa', 'text': 'Hi there. How are you feeling today?'}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': 'Tell me more about it.'}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': 'Hi there. What brings you here today?'}]
+[{'recipient_id': 'Rasa', 'text': 'Hello there. Tell me how are you feeling today?'}]
+[{'recipient_id': 'Rasa', 'text': "Hello there. Glad to see you're back. What's going on in your world right now?"}]
+[{'recipient_id': 'Rasa', 'text': 'Hi there. How are you feeling today?'}]
+[{'recipient_id': 'Rasa', 'text': 'Tell me more about it.'}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': "I'm CBT. I am a conversational agent designed to mimic a therapist. So how are you feeling today?"}]
+[{'recipient_id': 'Rasa', 'text': "I'm here for you. Could you tell me why you're feeling this way?"}]
+[{'recipient_id': 'Rasa', 'text': 'Oh I see. Tell me more'}]
+[{'recipient_id': 'Rasa', 'text': 'Oh I see. Tell me more'}]
+[{'recipient_id': 'Rasa', 'text': "I'm listening. Tell me more."}]
+[{'recipient_id': 'Rasa', 'text': 'Tell me more about it.'}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': 'Oh I see. Tell me more'}]
+[{'recipient_id': 'Rasa', 'text': 'Tell me more about it.'}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': "I'm listening. Tell me more."}]
+[{'recipient_id': 'Rasa', 'text': "I'm listening. Tell me more."}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': 'Oh I see. Tell me more'}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': 'Call me CBT'}]
+[{'recipient_id': 'Rasa', 'text': 'You can call me CBT.'}]
+[{'recipient_id': 'Rasa', 'text': 'Yes, sure. How can I help you?'}]
+[{'recipient_id': 'Rasa', 'text': "I'm listening. Tell me more."}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': 'Great to see you. How do you feel currently?'}]
+[{'recipient_id': 'Rasa', 'text': 'Hi there. What brings you here today?'}]
+[{'recipient_id': 'Rasa', 'text': 'Hello there. Tell me how are you feeling today?'}]
+[{'recipient_id': 'Rasa', 'text': 'Tell me more about it.'}]
+[{'recipient_id': 'Rasa', 'text': 'I see. What else?'}]
+[{'recipient_id': 'Rasa', 'text': "Oh okay. Why don't you tell me more about it?"}]
+[{'recipient_id': 'Rasa', 'text': "I'm listening. Please go on."}]
+[{'recipient_id': 'Rasa', 'text': 'Great to see you. How do you feel currently?'}]

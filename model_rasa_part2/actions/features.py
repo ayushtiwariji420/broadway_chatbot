@@ -23,10 +23,10 @@ def openFunction(crust):
 def productionTable(full_message,broadway_show,cityCode,city): 
     query = productionShows(full_message,broadway_show,cityCode)
     print(query)
-    # try:
-    data = querySearcher(query)
-    # except:
-    #     return "Sorry I didn't got that try with simple words"
+    try:
+        data = querySearcher(query)
+    except:
+        return "Sorry I didn't got that try with simple words"
     if len(data)==0 and broadway_show==None:
         return "For which show"
     elif len(data)==0 and city==None:
@@ -54,7 +54,7 @@ def regionalTable(full_message,broadway_show,city):
         return format_reply
     
 ###########openai function###########
-openai.api_key = "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"
+openai.api_key = "YOUR_OPENAI_APIKEY"
 
 
 
@@ -84,14 +84,13 @@ def location_coder(city):
 # connects database and run the query to fetch data
 def querySearcher(query):
     dydb = mysql.connector.connect(
-            user = "root",
-            password = "Shashikant@420",
-            database="movie"
+            user = "USERNAME",
+            password = "PASSWORD",
+            database="DATABASE_NAME"
         )     
     cursor = dydb.cursor()
     cursor.execute(query)
     data = cursor.fetchall()
-    print("##############", data)
     return data
 
 

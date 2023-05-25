@@ -237,6 +237,7 @@ def extraction_info(prompt):
     extractor.add_example(Example("so how can I book tickets for the show","None;None"))
     extractor.add_example(Example("how can I book tickets for the Chicago in Hamilton city","Chicago;Hamilton"))
     extractor.add_example(Example("ok what's the show timing on sunday","None;None"))
+    extractor.add_example(Example("in New York" or "in new york", "None;New York"))
     
 
     p = extractor.submit_request(prompt)

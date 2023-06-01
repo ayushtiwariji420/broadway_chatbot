@@ -1,0 +1,326 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey bro
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - see you around
+    - bye bye
+    - see you later
+ 
+- intent: thanks
+  examples: |
+    - Thanks
+    - thank you
+    - thank you very much
+    - thanks for the information
+    - thank you for helping me
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: context_setter
+  examples: |
+    - What time is the show Hamilton tonight?
+    - What are the show timings for Kimberly Akimbo?
+    - When is the next performance of The Phantom of the Opera?
+    - What time is Hamilton showing this evening?
+    - What are the show timings for Dear Evan Hansen this weekend?
+    - When can I catch a performance of Les Misérables this week?
+    - What time does Wicked start on Friday evening?
+    - Is there a Hamilton show tonight?
+    - When is the next showing of The Lion King at the New York?
+    - What are the timings for The Book of Mormon on Sunday?
+    - What time is Bad Cinderella showing in [New York](place)?
+    - When is the Almost Famous show in [Paris](place)?
+    - What time is The Lion King showing tomorrow?
+    - When does the Phantom of the Opera start tonight?
+    - What are the show timings for Chicago this weekend?
+    - When is the next performance of Dear Evan Hansen at the Music Box Theatre?
+    - What time is The Book of Mormon playing on Saturday afternoon?
+    - What is the runtime of Hamilton?
+    - Can you give me a description of Kimberly Akimbo?
+    - When does The Phantom of the Opera end its run?
+    - What is the ticket price for Hamilton?
+    - Where can I buy tickets for Dear Evan Hansen?
+    - What is the start date of Les Misérables?
+    - When is the last performance of Wicked in [New York](place)?
+    - Is there a website to buy tickets for The Lion King?
+    - Can you tell me more about the story of The Book of Mormon?
+    - What is the end date of Bad Cinderella?
+    - When does the Almost Famous show start in Paris?
+    - What musicals can I see in [Tokyo](place)?
+    - Is there any Broadway show currently going on in Moscow?
+    - What's the plot of The Masks of Oscar Wilde?
+    - What's playing at Mountainside Theatre?
+    - What is The Masks of Oscar Wilde about?
+    - What is the end date of Girls in the Boat?
+    - Can you give me an overview of the plot for this show?
+    - How long does the performance last, roughly?
+    - What is the central message or lesson of the show?
+    - Can you provide me with information on ticket prices for the show?
+    - Where can I find more information on the plot of the show?
+    - What's the phone number to book tickets for Metropolis?
+    - Can you give me a link to the box office or ticket sales page for the performance?
+    - where can I find tickets for the broadway show
+    - What is the average duration of the performance?
+    - Do you have any insights on the cost of tickets for the show in the West End?
+    - Where can I find more information on the plot of the show?
+    - What is the phone number to book tickets?
+    - what is the estimated runtime of the show
+    - What is the price range for tickets to the show
+    - Can you provide me with more details about the show and where I can learn more
+    - Musicals playing in Times Square
+    - What Broadway musicals are playing on 42nd Street?
+    - Dramas playing in Midtown
+    - Where can I see a drama on Broadway tonight
+    - What one-person shows are playing in the West Village
+    - Are there any solo performances in the East Village tonight
+    - What musical revues are playing on the Upper East Side?
+    - What funny shows are playing on 42nd Street
+    - Are there any comedies in the Theater District tonight
+    - can I see a Broadway comedy tonight in London
+    - I am searching for a show in New York
+    - is there any show going on in New York city
+    - what is timing on sunday for a walk on the moon
+    - can I book tickets for the show
+    - ok any Idea about the ticket prices
+
+- intent: facts
+  examples: |
+    - What awards has Rosie O'Donnell won?
+    - What awards has Rosie O'Donnell been nominated for?
+    - How many Broadway shows has Mandy Gonzalez been in?
+    - How many West End shows has Mandy Gonzalez been in?
+    - How many Broadway shows has Alis-Elaine Anderson been in?
+    - What awards has Danielle Ferland been nominated for?
+    - How many Broadway shows has Kirsten Aimee been in?
+    - What awards has Mary Bacon won?
+    - hey can you tell me the number of shows sherry anderson been in
+    - What are the nominations that Andrew Rannells has earned in his profession?
+    - Can you tell me the awards that Andrew Rannells has been considered for?
+    - What accolades has Andrew Rannells been recognized for?
+    - How many times has Rachel J. Anderson been cast in West End shows?
+    - What is the extent of Rachel J. Anderson's experience in the West End?
+    - What is the count of West End productions that Andrew Rannells has been in?
+    - What is the total number of West End productions that Rachel J. Anderson has been involved in?
+    - How many times has The Book of Mormon been nominated for a Tony Award?
+    - What are the major Tony Award categories that The Book of Mormon has been nominated for?
+    - Besides the Tony Awards, what other awards has The Book of Mormon won?
+    - which is the longest running broadway show throughout the history of broadways
+
+
+- intent: norm
+  examples: |
+    - What Broadway shows has Mandy Gonzalez been in?
+    - What is the birthplace of Rosie O'Donnell?
+    - What is the gender of Kirsten Aimee?
+    - What is the URL of Rosie O'Donnell?
+    - When did Rosie O'Donnell pass away?
+    - Is Mandy Gonzalez a legit person?
+    - Who is credited in Kirsten Aimee's credits list?
+    - What is the Twitter username of Mandy Gonzalez?
+    - Is Rosie O'Donnell associated with any company?
+    - What is the birth name of Mandy Gonzalez?
+    - What is the biography of Kirsten Aimee?
+    - What is the Facebook page of Rosie O'Donnell?
+    - What is the agent contact information for Mandy Gonzalez?
+    - Is Kirsten Aimee's Instagram username available?
+    - What is the domain for Rosie O'Donnell's website?
+    - What skills does Mandy Gonzalez possess?
+    - Is Kirsten Aimee associated with any theater company?
+    - What is the birthplace of Rosie O'Donnell?
+    - What notable roles has Laura Bell Bundy portrayed in Broadway productions?
+    - What roles Melanie Janine Brown played in her career?
+    - did Tammy Blanchard had been in any television show?
+    - What TV shows has Tammy Blanchard done?
+    - what roles Laura Benanti played in TV shows?
+    - did Carolee Carmello recieved any awards by broadway productions?
+    - What is the Twitter handle of Ben Platt?
+    - Has Sutton Foster released any solo albums?
+    - What is the age of Andrew Rannells?
+    - What Broadway roles has Sutton Foster originated?
+    - Has Neil Patrick Harris appeared in any non-musical plays?
+    - Has Hugh Jackman received any awards for his performances in Broadway productions?
+    - Has Laura Linney acted in any Broadway musicals?
+    - What television shows has Jesse Tyler Ferguson been a part of?
+    - Has Patti LuPone played any iconic roles in movie adaptations of Broadway musicals?
+    - What television shows has Laura Benanti appeared in?
+    - Has Laura Osnes acted in any non-musical plays?
+    - Has Norbert Leo Butz performed in any West End productions?
+
+- intent: suggetions
+  examples: |
+    - can you suggest me any broadway
+    - do you any suggetions for me about broadway?
+    - hey can you suggest me any broadway show that I might like?
+    - is there any upcoming broadway shows that I must watch?
+
+- intent: name
+  examples: |
+    - I want to tell you my name David{"entity": "username", "value" : "David"}
+    - My name is Sandy{"entity": "username", "value" : "Sandy"}
+    - hello myself Jack{"entity": "username", "value" : "Jack"}
+    - Hi, I'm Lisa{"entity": "username", "value": "Lisa"}
+    - This is John{"entity": "username", "value": "John"}
+    - Nice to meet you, I'm Sarah{"entity": "username", "value": "Sarah"}
+    - Hey, call me Mike{"entity": "username", "value": "Mike"}
+    - You can call me Emily{"entity": "username", "value": "Emily"}
+    - My name's Tom{"entity": "username", "value": "Tom"}
+    - myself Kevin{"entity": "username", "value": "Kevin"}
+
+- intent: location
+  examples: |
+    - I'm looking for timings in [London](place)
+    - in [New York](place) 
+    - I'm looking in [West End](place)
+    - in [Paris](place)
+
+- intent: equity_jobs
+  examples: |
+    - Is there any Equity vacancy?
+    - where can I find details about broadway auditiona?
+    - I want to know about broadway auditions?
+    - can you tell me something about auditions of broadways
+    - How can I find out about Equity job opportunities in Broadway?
+    - What Equity jobs are currently available in Broadway?
+    - Can you tell me about any open Equity roles in Broadway productions?
+    - I'm interested in working in an Equity job on Broadway, what opportunities are available?
+    - Where can I find information about Equity job postings in Broadway?
+    - What are the requirements for working in an Equity job on Broadway?
+    - Are there any open acting roles in Broadway?
+    - How can I audition for an acting role on Broadway?
+    - What are the requirements for becoming an Equity actor on Broadway?
+    - Can you tell me about any current Equity acting job opportunities in Broadway?
+    - What Broadway productions are currently casting for Equity actors?
+    - Is there any open Equity production manager job in Broadway?
+    - How can I find out about Equity production manager job opportunities in Broadway?
+    - What are the requirements for becoming an Equity production manager on Broadway?
+    - Can you tell me about any current Equity production manager job openings in Broadway?
+    - What Broadway productions are currently seeking Equity production managers?
+    - Are there any open Equity musical director roles in Broadway?
+    - How can I apply for an Equity musical director job on Broadway?
+    - What are the requirements for becoming an Equity musical director on Broadway?
+    - Can you tell me about any current Equity musical director job opportunities in Broadway?
+    - What Broadway productions are currently casting for Equity musical directors?
+
+
+- intent: non_equity_jobs
+  examples: |
+    - Are there any open non-union stage manager jobs in Broadway?
+    - How can I find out about non-Equity job opportunities in Broadway?
+    - Can you tell me about any current non-Equity stage manager job openings in Broadway?
+    - What are the requirements for becoming a non-union stage manager on Broadway?
+    - What Broadway productions are currently hiring non-Equity stage managers?
+    - Are there any open non-union wardrobe jobs in Broadway?
+    - How can I find out about non-Equity wardrobe job opportunities in Broadway?
+    - Can you tell me about any current non-Equity wardrobe job openings in Broadway?
+    - What are the requirements for becoming a non-union wardrobe assistant on Broadway?
+    - What Broadway productions are currently hiring non-Equity wardrobe staff?
+    - Are there any open non-union lighting designer jobs in Broadway?
+    - How can I find out about non-union job opportunities for lighting designers in Broadway?
+    - Can you tell me about any current non-Equity lighting designer job openings in Broadway?
+    - What are the requirements for becoming a non-union lighting designer on Broadway?
+    - What Broadway productions are currently seeking non-Equity lighting designers?
+
+- intent: industry_jobs
+  examples: |
+    - How can I find industry job opportunities in Broadway?
+    - What industry jobs are available in Broadway?
+    - Can you tell me about any current industry job openings in Broadway?
+    - What are the requirements for industry jobs in Broadway?
+    - What companies in Broadway offer industry jobs?
+    - Are there any open marketing jobs in Broadway?
+    - How can I apply for a marketing job in Broadway?
+    - Can you tell me about any current marketing job openings in Broadway?
+    - What are the requirements for becoming a marketer in the Broadway industry?
+    - What Broadway productions are currently hiring for marketing positions?
+    - Are there any open finance jobs in Broadway?
+    - How can I apply for a finance job in Broadway?
+    - Can you tell me about any current finance job openings in Broadway?
+    - What are the requirements for becoming a financial professional in the Broadway industry?
+    - What companies in Broadway are currently hiring for finance positions?
+
+- intent: add_job
+  examples: |
+    - How can I add a job listing to the site?
+    - What is the process for adding a job to the site?
+    - Can you tell me how to post a job on the site?
+    - What are the requirements for adding a job listing to the site?
+    - Who can I contact to add a job posting to the site?
+    - What are the requirements for applying to a job listing on the site?
+    - How can I apply to a job listing on the site?
+    - I want to add a job listing on this site?
+
+- intent: all_jobs
+  examples: |
+    - Where can I get details about jobs?
+    - I am searching for a job.
+    - I am searching for a job in broadways.
+    - can I get a job in broadways?
+    - What kind of jobs are available in the Broadway industry?
+    - How can I find job openings in the Broadway industry?
+    - What are the qualifications for working in a Broadway show?
+    - What are the salaries like for jobs in the Broadway industry?
+    - Are there any job fairs or networking events for the Broadway industry? 
+
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - I'm great
+    - Who's the US President?
+    - Can you tell me a joke?
+    - What's your favorite color?
+    - How do I make a cake?
+    - Can you do my homework for me?
+    - Sing me a song
+    - Can you give me stock tips?
+    - What's the meaning of life?
+    - Tell me a secret
+    - Are you a robot?
+    - Can you tell me a story?
+    - What's the capital of Mars?
+    - Do you know any good pickup lines?
+    - Have Sutton Foster and Gavin Creel ever worked together?
+    - Did Lin-Manuel Miranda and Leslie Odom Jr. appear in the same production of Hamilton?
+    - Which Broadway show did Idina Menzel and Kristin Chenoweth both perform in?
+    - Does Lin-Manuel Miranda have any scheduled absences from Hamilton?
+    - Is Sara Bareilles going to be out of Waitress on October 15th?
+    - Who is replacing Ben Platt in Dear Evan Hansen?
+    - Where can I find audition advice?
+    - What are some tips for preparing for a Broadway audition?
+    - Can you recommend any resources for improving my musical theater skills?
+    - Where can I buy Broadway merchandise?
+    - Is there a store in New York City that sells Broadway souvenirs?
+    - Can I purchase official Hamilton merchandise online?
+    - you are really good in all these things
+    - what's the difference between broadway and off-broadway
+    - What do you say
+    - How are you

@@ -1,0 +1,133 @@
+version: "3.1"
+
+stories:
+
+- story: facts qustions
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: facts
+  - action: action_about_facts
+
+- story: show times
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: context_setter
+  - action: action_context_set
+  
+- story: suggesting shows
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: suggetions
+  - action: action_suggest_show
+
+- story: saving name
+  steps:
+  - intent: name
+  - action: action_my_name
+
+
+- story: show times
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: context_setter
+  - action: action_context_set
+  - intent: location
+  - action: action_city
+
+- story: equity job searching
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: equity_jobs
+  - action: utter_equity_jobs
+
+- story: non equity job searching
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: non_equity_jobs
+  - action: utter_non_equity_jobs
+
+- story: industry job searching
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: industry_jobs
+  - action: utter_industry_jobs
+
+- story: add job story
+  steps:
+  - intent: add_job
+  - action: utter_add_job
+
+- story: about show details story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: context_setter
+  - action: action_context_set
+  - intent: context_setter
+  - action: action_context_set
+
+- story: about show details story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: out_of_scope
+  - action: action_fallback
+  - intent: context_setter
+  - action: action_context_set
+  - intent: context_setter
+  - action: action_context_set
+  - intent: context_setter
+  - action: action_context_set
+  - intent: out_of_scope
+  - action: action_fallback
+  - intent: thanks
+  - action: utter_thanks
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: normpeoples story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: norm
+  - action: action_about_normpeople
+  - intent: norm
+  - action: action_about_normpeople
+  - intent: norm
+  - action: action_about_normpeople
+
+- story: interactive_story_5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: name
+  - action: action_my_name
+  - slot_was_set:
+    - username: "Kevin"
+  - intent: context_setter
+  - action: action_context_set
+  - slot_was_set:
+    - place: New York
+  - slot_was_set:
+    - cityCode: ('NY','OF','FF','BR')
+  - intent: context_setter
+  - action: action_context_set
+  - slot_was_set:
+    - broadway_name: Walk on the Moon
+  - intent: context_setter
+  - action: action_context_set
+  - intent: context_setter
+  - action: action_context_set
+
+
+
+
+
+

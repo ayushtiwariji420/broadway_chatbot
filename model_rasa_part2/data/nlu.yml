@@ -60,6 +60,10 @@ nlu:
     - What time is Bad Cinderella showing in [New York](place)?
     - When is the Almost Famous show in [Paris](place)?
     - What time is The Lion King showing tomorrow?
+    - can you suggest me any broadway
+    - do you any suggetions for me about broadway?
+    - hey can you suggest me any broadway show that I might like?
+    - is there any upcoming broadway shows that I must watch?
     - When does the Phantom of the Opera start tonight?
     - What are the show timings for Chicago this weekend?
     - When is the next performance of Dear Evan Hansen at the Music Box Theatre?
@@ -197,13 +201,7 @@ nlu:
     - what famous broadway shows Pepita Salima worked in
     - did Rosie O'Donnel worked as a host
     - did Robb Sapp and Billy Eichner worked together
-
-- intent: suggetions
-  examples: |
-    - can you suggest me any broadway
-    - do you any suggetions for me about broadway?
-    - hey can you suggest me any broadway show that I might like?
-    - is there any upcoming broadway shows that I must watch?
+    
 
 - intent: name
   examples: |

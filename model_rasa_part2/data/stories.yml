@@ -15,13 +15,6 @@ stories:
   - action: utter_greet
   - intent: context_setter
   - action: action_context_set
-  
-- story: suggesting shows
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: suggetions
-  - action: action_suggest_show
 
 - story: saving name
   steps:

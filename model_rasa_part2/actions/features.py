@@ -285,7 +285,7 @@ def ansShows(prompt,broadway_show = '',city= ''):
     ans.add_example(Example("ok I'm searching for the timings of Lion King show in London before 05 may,[]","Sorry there is no shows on exact date you are searching for"))
     ans.add_example(Example("can you tell me more about cast of Tartuffe: Born Again,[('Mariane', 'Jane Krakowski'), ('Tartuffe', 'John Glover'), ('Orgon', 'David Schramm'), ('Dorine', 'Alison Fraser'), ('Mme. Pernelle', 'Patricia Conolly'), ('Ms. De Salle', 'Susie Duff'), ('Damis', 'Kevin Dewey'), ('Elmire', 'Haviland Morris'), ('Damis', 'Peter Rini'), ('Dorine', 'Susie Duff'), ('Elmire', 'Susie Duff'), ('Mariane', 'Jeanne Hime'), ('Mme. Pernelle', 'Angela Pietropinto'), ('Ms. De Salle', 'Angela Pietropinto'), ('Orgon', 'Tom Ligon'), ('Production Assistant', 'Jeanne Hime'), ('Visitor', 'Peter Rini'), ('Visitor', 'Tom Ligon')]","The cast of Tartuffe: Born Again includes Jane Krakowski as Mariane, John Glover as Tartuffe, David Schramm as Orgon, Alison Fraser as Dorine, Patricia Conolly as Mme. Pernelle, Susie Duff as Ms. De Salle, Kevin Dewey as Damis, Haviland Morris as Elmire, Peter Rini as Damis and Visitor, Jeanne Hime as Production Assistant, and Tom Ligon as Orgon and Visitor."))
     ans.add_example(Example("what are the timings of the show in new york,[]",f"Apologies, but currently, there are no {broadway_show} shows taking place in New York."))
-    # ans.add_example(Example("",""))
+    ans.add_example(Example("I would like to book tickets for the show,[('https://secure.georgestreetplayhouse.org/events/awalkonthemoon?startDate=2020-04-01&view=calendar',)]","Sure, you can book tickets for A Walk on the Moon at <a href='https://secure.georgestreetplayhouse.org/events/awalkonthemoon?startDate=2020-04-01&view=calendar'>https://secure.georgestreetplayhouse.org/events/awalkonthemoon?startDate=2020-04-01&view=calendar</a>"))
     # ans.add_example(Example("",""))
     # ans.add_example(Example("",""))
     p = ans.submit_request(prompt)
@@ -325,7 +325,7 @@ def extraction_info(prompt):
             both[i] = None
     return both
 
-def normpeopleTable(prompt):
+def normpeopleTable(prompt,last_people):
 
     # model to generate the answer
     norm = GPT(engine="text-davinci-003",
@@ -353,13 +353,26 @@ def normpeopleTable(prompt):
     norm.add_example(Example("awards Melissa Errico won?",'''SELECT bio FROM normpeople WHERE clean_name LIKE "%MelissaErrico%" AND bio is not NULL AND bio <> '';'''))
     norm.add_example(Example("What notable roles has Laura Bell Bundy portrayed in Broadway productions?",'''SELECT bio FROM normpeople WHERE clean_name LIKE "%LauraBellBundy%" AND bio is not NULL AND bio <> '';'''))
     norm.add_example(Example("which actors have won tony award" or "what actors won Tony awards", '''SELECT name FROM normpeople WHERE bio LIKE "%tony award%";'''))
+    norm.add_example(Example("What Broadway shows has she been in?",f'''SELECT bio FROM normpeople WHERE clean_name LIKE "{last_people}" AND bio is not NULL AND bio <> '';'''))
+    norm.add_example(Example("What Broadway shows has actor been in?",f'''SELECT bio FROM normpeople WHERE clean_name LIKE "{last_people}" AND bio is not NULL AND bio <> '';'''))
+    norm.add_example(Example("What Broadway shows has he been in?",f'''SELECT bio FROM normpeople WHERE clean_name LIKE "{last_people}" AND bio is not NULL AND bio <> '';'''))
+    norm.add_example(Example("What Broadway shows has he been in?",f'''SELECT bio FROM normpeople WHERE clean_name LIKE "{last_people}" AND bio is not NULL AND bio <> '';'''))
+    norm.add_example(Example("what's his Instagram username?",f"SELECT instagram FROM normpeople WHERE clean_name LIKE '{last_people}' AND instagram IS NOT NULL;"))
+    
     # norm.add_example(Example("",""))
 
-    
 
     p = norm.submit_request(prompt)
 
-    return p['choices'][0]['text'][8:]
+    ans = p['choices'][0]['text'][8:]
+
+    pattern = r'WHERE clean_name LIKE "([^"]+)"'
+    match = re.search(pattern, ans)
+    if match:
+        new_people = match.group(1)
+        print(new_people)
+
+    return {'ans':ans, 'new_people':new_people}
 
 def columnTable(prompt,context):
 

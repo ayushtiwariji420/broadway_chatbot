@@ -21,7 +21,6 @@ intents:
 actions:
 - action_context_set
 - action_about_facts
-- action_suggest_show
 - action_my_name
 - action_city
 - action_fallback
@@ -53,6 +52,10 @@ slots:
     mappings:
     - type: custom
   context:
+    type: text
+    mappings:
+    - type: custom
+  people:
     type: text
     mappings:
     - type: custom

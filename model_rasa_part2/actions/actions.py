@@ -263,6 +263,7 @@ class actionFacts(Action):
         print("$$$$$$$$$$$$$$$$$$$$$$","action_about_facts")
         try:
             full_message = tracker.latest_message['text']
+            last_people = tracker.get_slot("people")
             formated = question_formatter(full_message)
             print(formated)
 
@@ -272,7 +273,7 @@ class actionFacts(Action):
 
             if len(data) == 0:
                 try:
-                    query = normpeopleTable(formated)
+                    query = normpeopleTable(formated,last_people)
                     print(query)
                     data = querySearcher(query)
                     final_que = full_message + f",{data}"
@@ -306,9 +307,12 @@ class actionNorm(Action):
         
         full_message = tracker.latest_message['text']
         print(full_message)
+        last_people = tracker.get_slot("people")
 
-        query = normpeopleTable(full_message)
+        query_people = normpeopleTable(full_message,last_people)
+        query = query_people['ans']
         print(query)
+        people = query_people['new_people']
         data = querySearcher(query)
         final_que = full_message + f",{data}"
         response = ansShows(final_que,"broadway show","city")
@@ -317,7 +321,7 @@ class actionNorm(Action):
             
         dispatcher.utter_message(text=response)
         
-        return []
+        return [SlotSet("people",people)]
 
         # except:
         #     dispatcher.utter_message(text="sorry I didn't got your question")
@@ -351,25 +355,6 @@ class ActionSetCityName(Action):
             dispatcher.utter_message(text=reply)
             return [SlotSet("place", city),SlotSet("cityCode", cityCode)]
         
-    
-class ActionSuggest(Action):
-    def name(self) -> Text:
-        return "action_suggest_show"
-
-    async def run(
-            self,dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any],
-        ) -> List[Dict[Text, Any]]:
-        print("$$$$$$$$$$$$$$$$$$$$$$","action_suggest_show")
-        
-        broadway_shows = tracker.get_slot("broadway_name")
-
-        query = f'''SELECT prodtitle FROM productions WHERE tag = (SELECT tag FROM productions WHERE prodtitle = "{broadway_shows}" AND schedule_text is not NULL AND schedule_text <> '' LIMIT 1) AND prodtitle != "{broadway_shows}" ORDER BY RAND() LIMIT 5;'''
-        data = querySearcher(query)
-        print(data)
-        formatted_data = ", ".join([prod[0] for prod in data])
-        dispatcher.utter_message(text=f"ya you must watch {formatted_data}")
-
-        return []
 
     
 class ActionSetName(Action):

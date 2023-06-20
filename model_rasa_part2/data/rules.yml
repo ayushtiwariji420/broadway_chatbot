@@ -22,11 +22,6 @@ rules:
   - intent: facts
   - action: action_about_facts
 
-- rule: suggested
-  steps:
-  - intent: suggetions
-  - action: action_suggest_show
-
 - rule: my_name_rule
   steps:
   - intent: name  

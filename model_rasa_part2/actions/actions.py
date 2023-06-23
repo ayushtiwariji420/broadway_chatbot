@@ -291,7 +291,9 @@ class actionFacts(Action):
             return []
 
         except:
-            dispatcher.utter_message(text="sorry I didn't got your question")
+            prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, chatbot got an error while answering {full_message}\nNow handle it with grace like a gentle man and say sorry for not having it's answer"
+            reply = openFunction(prompt)
+            dispatcher.utter_message(text=reply)
             
             return []
         
@@ -304,29 +306,31 @@ class actionNorm(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         print("$$$$$$$$$$$$$$$$$$$$$$","action_about_normpeople")
-        
-        full_message = tracker.latest_message['text']
-        print(full_message)
-        last_people = tracker.get_slot("people")
+        try:
+            full_message = tracker.latest_message['text']
+            print(full_message)
+            last_people = tracker.get_slot("people")
 
-        query_people = normpeopleTable(full_message,last_people)
-        query = query_people['ans']
-        print(query)
-        people = query_people['new_people']
-        data = querySearcher(query)
-        final_que = full_message + f",{data}"
-        response = ansShows(final_que,"broadway show","city")
-        print(response)
+            query_people = normpeopleTable(full_message,last_people)
+            query = query_people['ans']
+            print(query)
+            people = query_people['new_people']
+            data = querySearcher(query)
+            final_que = full_message + f",{data}"
+            response = ansShows(final_que,"broadway show","city")
+            print(response)
 
+                
+            dispatcher.utter_message(text=response)
             
-        dispatcher.utter_message(text=response)
-        
-        return [SlotSet("people",people)]
+            return [SlotSet("people",people)]
 
-        # except:
-        #     dispatcher.utter_message(text="sorry I didn't got your question")
+        except:
+            prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, chatbot got an error while answering {full_message}\nNow handle it with grace like a gentle man and say sorry for not having it's answer"
+            reply = openFunction(prompt)
+            dispatcher.utter_message(text=reply)
             
-        # return []
+            return []
 
 
 
@@ -381,24 +385,30 @@ class ActionColumn(Action):
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[Dict[Text, Any]]:
         print("$$$$$$$$$$$$$$$$$$$$$$","action_columntable")
+        try:
+            context = tracker.get_slot("context")
+            print(context)
+            full_message = tracker.latest_message['text']
+            # try:
+            query_New_context = columnTable(full_message,context)
+            query = query_New_context['ans']
+            print(query)
+            new_context = query_New_context['new_context']
+            print(query)
+            data = querySearcher(query)
+            formated = full_message + f",{data}"
+            answer = ansShows(formated)
+            print(answer)
 
-        context = tracker.get_slot("context")
-        print(context)
-        full_message = tracker.latest_message['text']
-        # try:
-        query_New_context = columnTable(full_message,context)
-        query = query_New_context['ans']
-        print(query)
-        new_context = query_New_context['new_context']
-        print(query)
-        data = querySearcher(query)
-        formated = full_message + f",{data}"
-        answer = ansShows(formated)
-        print(answer)
+            dispatcher.utter_message(text=answer)
 
-        dispatcher.utter_message(text=answer)
-
-        return [SlotSet("context", new_context)]
+            return [SlotSet("context", new_context)]
+        except:
+            prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, chatbot got an error while answering {full_message}\nNow handle it with grace like a gentle man and say sorry for not having it's answer"
+            reply = openFunction(prompt)
+            dispatcher.utter_message(text=reply)
+            
+            return []
     
 
 class ActionCast(Action):
@@ -409,21 +419,28 @@ class ActionCast(Action):
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[Dict[Text, Any]]:
         print("$$$$$$$$$$$$$$$$$$$$$$","action_cast")
+        try:
+            full_message = tracker.latest_message['text']
+            broadway = tracker.get_slot("broadway_name")
+            query_broadway = castTable(full_message,broadway)
+            print(query_broadway)
+            query = query_broadway['ans']
+            new_broadway = query_broadway['broadway']
+            # production_id = querySearcher(f"SELECT id FROM productions WHERE prodtitle LIKE '%{broadway}%' AND market_type_code = 'BR' LIMIT 1;")
+            data = querySearcher(query)
+            final_que = full_message + f",{data}"
+            format_reply = ansShows(final_que,broadway,"city")
 
-        full_message = tracker.latest_message['text']
-        broadway = tracker.get_slot("broadway_name")
-        query_broadway = castTable(full_message,broadway)
-        print(query_broadway)
-        query = query_broadway['ans']
-        new_broadway = query_broadway['broadway']
-        # production_id = querySearcher(f"SELECT id FROM productions WHERE prodtitle LIKE '%{broadway}%' AND market_type_code = 'BR' LIMIT 1;")
-        data = querySearcher(query)
-        final_que = full_message + f",{data}"
-        format_reply = ansShows(final_que,broadway,"city")
+            dispatcher.utter_message(text=format_reply)
 
-        dispatcher.utter_message(text=format_reply)
-
-        return [SlotSet("broadway_name", new_broadway)]
+            return [SlotSet("broadway_name", new_broadway)]
+    
+        except:
+            prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, chatbot got an error while answering {full_message}\nNow handle it with grace like a gentle man and say sorry for not having it's answer"
+            reply = openFunction(prompt)
+            dispatcher.utter_message(text=reply)
+            
+            return []
 
 class ActionFallback(Action):
     def name(self) -> Text:

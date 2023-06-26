@@ -48,6 +48,7 @@ nlu:
   examples: |
     - What time is the show Hamilton tonight?
     - What are the show timings for Kimberly Akimbo?
+    - what are the timings for A Beautiful Noise
     - When is the next performance of The Phantom of the Opera?
     - where can I watch Rocky
     - What time is Hamilton showing this evening?

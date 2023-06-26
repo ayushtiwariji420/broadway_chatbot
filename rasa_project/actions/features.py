@@ -11,35 +11,30 @@ class bot_memory:
 
     def slotsetter(self,query,data):
         try:
-            if ("SELECT showname" in query or "SELECT prodtitle" in query) and len(data)==1 and data[0][0] != '':
-                print("value broadway changet to ",data[0][0])
+            if ("SELECT showname" in query or "SELECT prodtitle" in query) and len(data)==1 and data[0][0] != '':            
                 Bot.broadway = data[0][0]
                 Bot.city = None
                 Bot.code = None
-            elif "SELECT city" in query and len(data)==1 and data[0][0] != '':
-                print("value city changet to ",data[0][0])
+            elif "SELECT city" in query and len(data)==1 and data[0][0] != '':           
                 Bot.city = data[0][0]
                 Bot.code = location_coder(Bot.city)
                 Bot.broadway = None
             elif "SELECT market_type_code" in query and len(data)==1 and data[0][0] != '':
-                print("value city changet to ",data[0])
                 Bot.city = querySearcher(f'''SELECT meaning FROM Code WHERE type = 'MarketType' and code = '{data[0][0]}';''')[0][0]
                 Bot.code = data[0]
                 Bot.broadway = None
-
             else:
-                print("value changed to None")
                 Bot.broadway = None
                 Bot.broadway = None
                 Bot.code = None
         except:
-            print("value changed to None by exception")
             Bot.broadway = None
             Bot.broadway = None
             Bot.code = None
 
 Bot = bot_memory()
 
+# database connection
 dydb = mysql.connector.connect(
             user = "root",
             password = "shashikant420",
@@ -66,7 +61,6 @@ def openFunction(crust):
 # function to run query, fetch data and return formatted reply for production show table 
 def productionTable(full_message,broadway_show,cityCode,city): 
     query = productionShows(full_message,broadway_show,cityCode)
-    print(query)
     try:
         data = querySearcher(query)
         if len(data)==0 and broadway_show==None:
@@ -86,12 +80,10 @@ def productionTable(full_message,broadway_show,cityCode,city):
 # function to run query, fetch data and return formatted reply for regional show table
 def regionalTable(full_message,broadway_show,city): 
     query = regionalShows(full_message,broadway_show,city)
-    print(query)
     try:
         data = querySearcher(query)
         if len(data)==0:
             query = productionShows(full_message,broadway_show,city)
-            print(query)
             data = querySearcher(query)
     except:
         prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, chatbot got an error while answering '{full_message}', conversation was going on {broadway_show} in {city}\nif current question is not from previous context then handle it with grace\n Now answer users question"
@@ -117,26 +109,25 @@ def location_coder(city):
         return None
     elif city.lower() == "london":
         data = ["('LN','WE')"]
-        print(data)
+
         return data[0]
     elif city.lower() == "new york":
         data = ["('NY','OF','FF','BR')"]
-        print(data)
+
         return data[0]
     else:
         query = f'''SELECT code FROM Code WHERE meaning = "{city}" AND type = 'MarketType';'''
         data = querySearcher(query)
         if len(data)==0:
-            print(data)
+    
             return f"('US')"
-        print(data)
+
         return f"('{data[0][0]}')"
 
 # connects database and run the query to fetch data
 def querySearcher(query):
     cursor.execute(query)
     data = cursor.fetchall()
-    print("##############", data)
     return data
 
 
@@ -171,9 +162,6 @@ def question_formatter(prompt,people):
     gpt.add_example(Example("what award has she won",f"What awards has {people} Won"))
     gpt.add_example(Example("In how many West End productions has he appeared?",f"How many West End shows has {people} been in?"))
     gpt.add_example(Example("did he won any awards",f"What awards has {people} won?"))
-    # gpt.add_example(Example("",""))
-    # gpt.add_example(Example("",""))
-    # gpt.add_example(Example("",""))
     p = gpt.submit_request(prompt)
 
     return p['choices'][0]['text'][8:]
@@ -216,6 +204,7 @@ def productionShows(prompt,broadway_show,cityCode):
     prod.add_example(Example("Are there any ballet shows currently playing on Broadway?",f'''SELECT prodtitle FROM productions WHERE showgenre IN ('BA') AND market_type_code IN ('BR') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text is not NULL AND schedule_text <> '';'''))
     prod.add_example(Example("Are there any shows in the melodrama genre available at the moment in London?",f'''SELECT prodtitle FROM productions WHERE showgenre IN ('ME') AND market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text is not NULL AND schedule_text <> '';'''))
     prod.add_example(Example("what are the timings in west end",f'''SELECT schedule_text FROM productions WHERE prodtitle LIKE "%{broadway_show}%" AND market_type_code IN ('WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text is not NULL AND schedule_text <> '';'''))
+    prod.add_example(Example("what comedy shows are playing in New york",f'''SELECT prodtitle FROM productions WHERE showgenre IN ('MU','OT','PM','UN') AND market_type_code IN ('NY','OF','FF','BR') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text is not NULL AND schedule_text <> '';'''))
 
     p = prod.submit_request(prompt)
 
@@ -236,7 +225,6 @@ def regionalShows(prompt,broadway_show,city):
     regional.add_example(Example("When does Girls in the Boat start" or "When is Girls in the Boat beginning its run" or "When can I see Girls in the Boat?", f"SELECT showstart FROM regionalshows WHERE showname LIKE '%Girls in the Boat%' AND city LIKE '%{city}%';"))
     regional.add_example(Example("What is the end date of Girls in the Boat" or "How long is Girls in the Boat running?" or "When is Girls in the Boat scheduled to end?" or "When is the last performance of Girls in the Boat?","SELECT showend FROM regionalshows WHERE showname LIKE '%Girls in the Boat%';"))
     regional.add_example(Example("What is 'The Masks of Oscar Wilde' about?" or "What's the plot of The Masks of Oscar Wilde?" or "What's the concept of The Masks of Oscar Wilde","SELECT showdesc FROM regionalshows WHERE showname LIKE '%The Masks of Oscar Wilde%';"))
-#     regional.add_example(Example("Who is in the cast of Metropolis" or "Could you give me some information about the cast of Metropolis?" or "Can you give me a list of the actors in Metropolis",""))
     regional.add_example(Example("What is the phone number for the ticket office?" or "What is the telephone number to purchase tickets?" or "What is the phone number to book tickets?" or "What's the number to call to reserve tickets" or "where can I get tickets for the show",f"SELECT ticketphone FROM regionalshows WHERE showname LIKE '%{broadway_show}%';"))
     regional.add_example(Example("What's the phone number to book tickets for Metropolis" or "Can you give me the number to call for Metropolis tickets" or "Is there a phone number I can call to purchase tickets for Metropolis","SELECT ticketphone FROM regionalshows WHERE showname LIKE '%Metropolis%';"))
     regional.add_example(Example("is there any show in Tokyo" or "What musicals can I see in Tokyo?" or "Can you tell me which shows are currently running in Tokyo?" or "Can you recommend a theater or show to see while in Tokyo?","SELECT showname FROM regionalshows WHERE city LIKE '%Tokyo%';"))
@@ -255,7 +243,6 @@ def regionalShows(prompt,broadway_show,city):
     regional.add_example(Example("where can I watch the Funny Girl" or "in which city Funny Girl is playing" or "Where is Funny girl going on","SELECT city FROM regionalshows WHERE showname LIKE '%Funny Girl%';"))
     regional.add_example(Example("is there any show of Edges is playing","SELECT city FROM regionalshows WHERE showname LIKE '%Edges%';"))
     regional.add_example(Example("where can I watch it" or "where can I watch the show",f"SELECT city FROM regionalshows WHERE showname LIKE '%{broadway_show}%';"))
-    # regional.add_example(Example("",""))
 
 
     p = regional.submit_request(prompt)
@@ -338,7 +325,6 @@ def extraction_info(prompt):
     p = extractor.submit_request(prompt)
 
     both = p['choices'][0]['text'][8:].split(";")
-    print(both)
 
     for i in range(len(both)):
         if both[i] == 'None':
@@ -390,7 +376,6 @@ def normpeopleTable(prompt,last_people):
     match = re.search(pattern, ans)
     if match:
         new_people = match.group(1)
-        print(new_people)
     else:
         new_people = None
 
@@ -428,7 +413,8 @@ def columnTable(prompt,context):
     match = re.search(pattern, ans)
     if match:
         new_context = match.group(1)
-    
+    else:
+        new_context = None
 
     return {'ans':ans, 'new_context':new_context}
 
@@ -456,9 +442,10 @@ def castTable(prompt,broadway_show):
     
     if prodtitle:
         prodtitle = prodtitle.group(1)
-        print("########prod", prodtitle)
     return {'ans':ans, 'broadway':prodtitle}
 
+
+# function to generate sql queries for authors table
 def authorTable(prompt,broadway):
 
     author = GPT(engine="text-davinci-003",
@@ -483,7 +470,6 @@ def authorTable(prompt,broadway):
     
     if prodtitle:
         prodtitle = prodtitle.group(1)
-        print("########prod", prodtitle)
     else:
         prodtitle = None
     return {'ans':ans, 'broadway':prodtitle}

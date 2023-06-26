@@ -1,0 +1,101 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - bot_challenge
+  - context_setter
+  - facts
+  - suggetions
+  - name
+  - location
+  - equity_jobs
+  - non_equity_jobs
+  - industry_jobs
+  - add_job
+  - columntable
+  - norm
+  - cast
+
+actions:
+- action_context_set
+- action_about_facts
+- action_my_name
+- action_city
+- action_fallback
+- action_about_normpeople
+- action_columntable
+- action_cast
+- action_authors
+
+entities:
+- place
+- username
+
+slots:
+  broadway_name:
+    type: text
+    mappings:
+    - type: custom
+  place:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: place
+  username:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: username
+  cityCode:
+    type: text
+    mappings:
+    - type: custom
+  context:
+    type: text
+    mappings:
+    - type: custom
+  people:
+    type: text
+    mappings:
+    - type: custom
+  
+  
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_thanks:
+  - text: "It was my pleasure that you find me useful, Feel free to ask questions anytime."
+
+  utter_happy:
+  - text: "Great to hear that"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+ 
+
+  utter_goodbye:
+  - text: "visit some other times, Good Bye"
+
+  utter_iamabot:
+  - text: "I'm a chatbot for the website https://www.broadwayworld.com/ and I'm only responsible for answering questions about Broadway shows."
+
+  utter_book_movie:
+  - text: "Yes sure here are the ticket details"
+  utter_equity_jobs:
+  - text: "You can find details about equity jobs on <a href='https://www.broadwayworld.com/theatre-auditions/'>https://www.broadwayworld.com/theatre-auditions/</a>"
+  utter_non_equity_jobs:
+  - text: "You can find details about non equity jobs on <a href='https://www.broadwayworld.com/nonequity.cfm'>https://www.broadwayworld.com/nonequity.cfm</a>"
+  utter_industry_jobs:
+  - text: "You can find details about industry jobs on <a href='https://www.broadwayworld.com/classifieds-jobs/'>https://www.broadwayworld.com/classifieds-jobs/</a>"
+  utter_add_job:
+  - text: "You can add job listing on <a href='https://www.broadwayworld.com/classifieds-jobs/addclassifieds.cfm'>https://www.broadwayworld.com/classifieds-jobs/addclassifieds.cfm</a>https://www.broadwayworld.com/classifieds-jobs/addclassifieds.cfm"
+
+session: true

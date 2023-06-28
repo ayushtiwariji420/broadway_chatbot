@@ -261,14 +261,14 @@ class actionFacts(Action):
         try:
             full_message = tracker.latest_message['text']
             last_people = tracker.get_slot("people")
-            formated = question_formatter(full_message,last_people)
+            formated = question_formatter(full_message)
 
             query = f'''SELECT answer FROM faq WHERE question = "{formated.strip()}";'''
             data = querySearcher(query)
 
             if len(data) == 0:
                 try:
-                    query_people = normpeopleTable(formated,last_people)
+                    query_people = normpeopleTable(full_message,last_people)
                     query = query_people['ans']
                     people = query_people['new_people']
                     data = querySearcher(query)

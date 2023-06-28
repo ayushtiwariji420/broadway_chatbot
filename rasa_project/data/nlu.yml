@@ -48,7 +48,6 @@ nlu:
   examples: |
     - What time is the show Hamilton tonight?
     - What are the show timings for Kimberly Akimbo?
-    - what are the timings for A Beautiful Noise
     - When is the next performance of The Phantom of the Opera?
     - where can I watch Rocky
     - What time is Hamilton showing this evening?
@@ -127,6 +126,21 @@ nlu:
     - do you have any photo or poster of show
     - can you provide timings for Horszowski Trio
     - In which city Rocky show is playing
+    - what is address of John Golden Theatre (Broadway)
+    - what are the timings for The Lion King show in Lyceum Theatre London
+    - what are the show timings at Lyceum Theatre,London
+    - what are the show timings at Lyceum Theatre
+    - which show is playing in Lunt-Fontanne Theatre
+    - what shows I can watch in Landor Theatre London
+    - what are the current shows and their show timings in Lyric Theatre, London
+    - what shows are going on in Mark Hellinger Theatre in New York
+    - what show is playing in Mark Hellinger Theatre New York
+    - there are how many seats in Mark Hellinger Theatre
+    - is there anything special about theatre
+    - can you tell me more about theatre
+    - what is the box office timing of theatre 
+    - any other information about St. James Theatre theatre
+    - what is the box office timing of St. James Theatre (Broadway)
 
 - intent: facts
   examples: |
@@ -138,19 +152,6 @@ nlu:
     - What awards has Danielle Ferland been nominated for?
     - How many Broadway shows has Kirsten Aimee been in?
     - What awards has Mary Bacon won?
-    - hey can you tell me the number of shows sherry anderson been in
-    - What are the nominations that Andrew Rannells has earned in his profession?
-    - Can you tell me the awards that Andrew Rannells has been considered for?
-    - What accolades has Andrew Rannells been recognized for?
-    - How many times has Rachel J. Anderson been cast in West End shows?
-    - What is the extent of Rachel J. Anderson's experience in the West End?
-    - What is the count of West End productions that Andrew Rannells has been in?
-    - What is the total number of West End productions that Rachel J. Anderson has been involved in?
-    - How many times has The Book of Mormon been nominated for a Tony Award?
-    - What are the major Tony Award categories that The Book of Mormon has been nominated for?
-    - Besides the Tony Awards, what other awards has The Book of Mormon won?
-    - which is the longest running broadway show throughout the history of broadways
-    - what awards Pepita Salima have won
     
 
 
@@ -200,11 +201,12 @@ nlu:
     - when did he died
     - who is mandy gonzlena
     - can you name some great actors who worked in Mamma Mia show
-    - who have worked in The Lion King?
-    - what famous shows Pepita Salima worked in
     - what famous broadway shows Pepita Salima worked in
     - did Rosie O'Donnel worked as a host
     - did Robb Sapp and Billy Eichner worked together
+    - what awards has she won?
+    - in what broadways has he worked on
+    - did she recieved any awards for her brilliant performances
     
 
 - intent: name
@@ -395,6 +397,8 @@ nlu:
     - what was role of Jon Emmanuel in the show
     - What was the role of Meryl Streep in the play Doubt: A Parable?
     - Which character did Jennifer Aniston portray in the show?
+    - who have worked in The Lion King?
+    - what famous shows Pepita Salima worked in
 
 - intent: author
   examples: |

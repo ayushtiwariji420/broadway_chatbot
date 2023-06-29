@@ -17,10 +17,12 @@ class bot_memory:
                 and len(data) == 1
                 and data[0][0] != ""
             ):
+                print("value broadway changet to ", data[0][0])
                 Bot.broadway = data[0][0]
                 Bot.city = None
                 Bot.code = None
             elif "SELECT city" in query and len(data) == 1 and data[0][0] != "":
+                print("value city changet to ", data[0][0])
                 Bot.city = data[0][0]
                 Bot.code = location_coder(Bot.city)
                 Bot.broadway = None
@@ -29,35 +31,26 @@ class bot_memory:
                 and len(data) == 1
                 and data[0][0] != ""
             ):
+                print("value city changet to ", data[0])
                 Bot.city = querySearcher(
                     f"""SELECT meaning FROM Code WHERE type = 'MarketType' and code = '{data[0][0]}';"""
                 )[0][0]
                 Bot.code = data[0]
                 Bot.broadway = None
+
             else:
+                print("value changed to None")
                 Bot.broadway = None
                 Bot.broadway = None
                 Bot.code = None
         except:
+            print("value changed to None by exception")
             Bot.broadway = None
             Bot.broadway = None
             Bot.code = None
 
 
 Bot = bot_memory()
-
-# Create a connection pool with automatic reconnection
-connection_pool = pooling.MySQLConnectionPool(
-    pool_name="my_pool",
-    pool_size=5,
-    user="root",
-    password="shashikant420",
-    database="chatbot1",
-    host="chatbot1.cyxgntsmiing.eu-north-1.rds.amazonaws.com",
-    port=3306,
-    autocommit=True,  # Set autocommit to True to handle reconnect properly
-    connect_timeout=10,  # Set an appropriate timeout value
-)
 
 
 # function to use openai search
@@ -76,6 +69,7 @@ def openFunction(crust):
 # function to run query, fetch data and return formatted reply for production show table
 def productionTable(full_message, broadway_show, cityCode, city):
     query = productionShows(full_message, broadway_show, cityCode)
+    print(query)
     try:
         data = querySearcher(query)
         if len(data) == 0 and broadway_show == None:
@@ -88,7 +82,7 @@ def productionTable(full_message, broadway_show, cityCode, city):
             Bot.slotsetter(query, data)
             return format_reply
     except:
-        prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, chatbot got an error while answering '{full_message}', conversation was going on {broadway_show} in {city}\nif current question is not from previous context then handle it with grace\n Now answer users question"
+        prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, \nif users question is lacking some information city or show name then read users message carefully and ask user to provide whichever is lacking shortly\n if question is not about show timings then don't ask for anything sipmply say sorry for not having enough information\nyou are not supposed to provide any kind of information\n Now answer users message: {full_message}"
         ans = openFunction(prompt)
         return ans
 
@@ -96,13 +90,15 @@ def productionTable(full_message, broadway_show, cityCode, city):
 # function to run query, fetch data and return formatted reply for regional show table
 def regionalTable(full_message, broadway_show, city):
     query = regionalShows(full_message, broadway_show, city)
+    print(query)
     try:
         data = querySearcher(query)
         if len(data) == 0:
             query = productionShows(full_message, broadway_show, city)
+            print(query)
             data = querySearcher(query)
     except:
-        prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, chatbot got an error while answering '{full_message}', conversation was going on {broadway_show} in {city}\nif current question is not from previous context then handle it with grace\n Now answer users question"
+        prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, \nif users question is lacking some information city or show name then read users message carefully and ask user to provide whichever is lacking shortly\n if question is not about show timings then don't ask for anything sipmply say sorry for not having enough information\nyou are not supposed to provide any kind of information\n Now answer users message: {full_message}"
         ans = openFunction(prompt)
         return ans
     # else:
@@ -122,36 +118,34 @@ def location_coder(city):
         return None
     elif city.lower() == "london":
         data = ["('LN','WE')"]
-
+        print(data)
         return data[0]
     elif city.lower() == "new york":
         data = ["('NY','OF','FF','BR')"]
-
+        print(data)
         return data[0]
     else:
         query = f"""SELECT code FROM Code WHERE meaning = "{city}" AND type = 'MarketType';"""
         data = querySearcher(query)
         if len(data) == 0:
+            print(data)
             return f"('US')"
-
+        print(data)
         return f"('{data[0][0]}')"
 
 
-# connects database and run the query to fetch data
+# Function to execute queries
 def querySearcher(query):
-    connection = connection_pool.get_connection()
-    cursor = connection.cursor()
-    # try:
+    dydb = mysql.connector.connect(
+            user = "root",
+            password = "shashikant420",
+            database="chatbot1",
+            host = "chatbot1.cyxgntsmiing.eu-north-1.rds.amazonaws.com"
+        )      
+    cursor = dydb.cursor()
     cursor.execute(query)
     data = cursor.fetchall()
-    print("##############", data)
     return data
-    # except mysql.connector.Error as err:
-    #     # Handle the error, e.g., log or raise an exception
-    #     print(f"An error occurred: {err}")
-    # finally:
-    #     cursor.close()
-    #     connection.close()
 
 
 # function to format users questions to be matched with faq table
@@ -261,7 +255,9 @@ def question_formatter(prompt):
             "What Broadway shows has Rosie O'Donnell been in?",
         )
     )
-
+    # gpt.add_example(Example("",""))
+    # gpt.add_example(Example("",""))
+    # gpt.add_example(Example("",""))
     p = gpt.submit_request(prompt)
 
     return p["choices"][0]["text"][8:]
@@ -427,8 +423,9 @@ def productionShows(prompt, broadway_show, cityCode):
     )
     prod.add_example(
         Example(
-            "where can I watch the show" or "in which theatre I can watch the show",
-            f"""SELECT schedule_text, market_type_code, theatrename, address FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%{broadway_show}%" AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';""",
+            "where can I watch the show"
+            or "in which theatre I can watch the show",
+            f"""SELECT schedule_text, market_type_code, theatrename, address FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%{broadway_show}%" AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '' LIMIT 8;""",
         )
     )
     prod.add_example(
@@ -436,7 +433,7 @@ def productionShows(prompt, broadway_show, cityCode):
             "where can I watch the Funny Girl"
             or "in which city Funny Girl is playing"
             or "Where is Funny girl going on",
-            f"""SELECT schedule_text, market_type_code, theatrename, address FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%Funny Girl%" AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';""",
+            f"""SELECT schedule_text, market_type_code, theatrename, address FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%Funny Girl%" AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '' LIMIT 8;""",
         )
     )
     prod.add_example(
@@ -444,14 +441,14 @@ def productionShows(prompt, broadway_show, cityCode):
             "I'm searching for The Lion King show in London before"
             or "when and where can I watch The Lion king show in London"
             or "can you fill me with theatres names and timing for The Lion King show in London",
-            f"""SELECT schedule_text, theatrename, address FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%Lion King%" AND market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';""",
+            f"""SELECT schedule_text, theatrename, address FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%Lion King%" AND market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '' LIMIT 8;""",
         )
     )
     prod.add_example(
         Example(
             "isn't the show playing in Broadways"
             or "can you please confirm show timing in Broadway theatres",
-            f"""SELECT schedule_text, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%Lion King%" AND market_type_code IN ('NY','BR','OF','FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';""",
+            f"""SELECT schedule_text, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%Lion King%" AND market_type_code IN ('NY','BR','OF','FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '' LIMIT 8;""",
         )
     )
     prod.add_example(
@@ -493,38 +490,89 @@ def productionShows(prompt, broadway_show, cityCode):
     )
     prod.add_example(
         Example(
-            "what shows are going on in Lunt-Fontanne Theatre in New York"
-            or "what shows are going on in Lunt-Fontanne Theatre (Broadway)",
-            "SELECT prodtitle, schedule_text FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE theatrename LIKE '%Lunt-Fontanne Theatre%' AND market_type_code IN ('NY', 'OF', 'FF', 'BR') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';",
+        "what shows are going on in Lunt-Fontanne Theatre in New York"
+        or "what shows are going on in Lunt-Fontanne Theatre (Broadway)",
+        "SELECT prodtitle, schedule_text FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE theatrename LIKE '%Lunt-Fontanne Theatre%' AND market_type_code IN ('NY', 'OF', 'FF', 'BR') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';"
         )
     )
     prod.add_example(
         Example(
-            "there are how many seats in Mark Hellinger Theatre",
-            f"""SELECT seats FROM theatres_names WHERE theatrename LIKE '%Mark Hellinger Theatre%';""",
+        "there are how many seats in Mark Hellinger Theatre",
+        f'''SELECT seats FROM mtheatres_names WHERE theatrename LIKE '%Mark Hellinger Theatre%';'''
         )
     )
     prod.add_example(
         Example(
-            "what is the box office timing of St. James Theatre (Broadway)",
-            f"""SELECT boxofficehours FROM theatres_names WHERE theatrename LIKE '%St. James Theatre%';""",
+        "what is the box office timing of St. James Theatre (Broadway)",
+        f'''SELECT boxofficehours FROM theatres_names WHERE theatrename LIKE '%St. James Theatre%';'''
         )
     )
     prod.add_example(
         Example(
-            "can you tell me more about Saville Theatre"
-            or "is there anything special about Saville Theatre",
-            f"""SELECT Notes FROM theatres_names WHERE theatrename LIKE '%Saville Theatre%';""",
+        "can you tell me more about Saville Theatre"
+        or "is there anything special about Saville Theatre",
+        f'''SELECT SUBSTRING(Notes, 1, 2000) FROM theatres_names WHERE theatrename LIKE '%Saville Theatre%';'''
         )
     )
-    # prod.add_example(
-    #     Example(
-    #     "",
-    #     f''''''
-    #     )
-    # )
+    prod.add_example(
+        Example(
+        "what's the timings for Frozen the Musical at the Theatre Royal, Drury Lane",
+        f'''SELECT schedule_text FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE '%Frozen%' AND theatrename LIKE '%Theatre Royal%' AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';'''
+        )
+    )
+    prod.add_example(
+        Example(
+        "what's the timings for Frozen the Musical at the Theatre Royal, Drury Lane London",
+        f'''SELECT schedule_text FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE '%Frozen%' AND theatrename LIKE '%Theatre Royal%' AND market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';'''
+        )
+    )
+    prod.add_example(
+        Example(
+        "where is The Orpheum Theatre",
+        f'''SELECT address,city FROM theatres_names WHERE theatrename LIKE '%Orpheum Theatre%';'''
+        )
+    )
+    prod.add_example(
+        Example(
+        "can you give me list of all the theatres in new york",
+        f'''SELECT theatrename FROM theatres_names WHERE city LIKE '%New York%' order by updated_datetime DESC LIMIT 50;'''
+        )
+    )
+    prod.add_example(
+        Example(
+        "can you suggest me some broadway shows",
+        f'''SELECT prodtitle FROM productions WHERE market_type_code IN ('NY','BR','OF','FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';'''
+        )
+    )
+    prod.add_example(
+        Example(
+        "can you suggest me some West End shows",
+        f'''SELECT prodtitle FROM productions WHERE market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text is not NULL AND schedule_text <> '';'''
+        )
+    )
+    prod.add_example(
+        Example(
+        "in which theatre",
+        f'''SELECT theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%{broadway_show}%" AND market_type_code IN {cityCode} AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';'''
+        )
+    )
+    prod.add_example(
+        Example(
+        "tell me names of some west end theatres",
+        f'''SELECT theatrename FROM theatres_names WHERE city LIKE '%London%' ORDER BY updated_datetime DESC LIMIT 50;'''
+        )
+    )
+    prod.add_example(
+        Example(
+        "tell me names of some Broadway theatres",
+        f'''SELECT theatrename FROM theatres_names WHERE city LIKE '%New York%' ORDER BY updated_datetime DESC LIMIT 50;'''
+        )
+    )
+    
 
     p = prod.submit_request(prompt)
+
+    print(prod.get_example(prompt))
 
     return p["choices"][0]["text"][8:]
 
@@ -581,6 +629,7 @@ def regionalShows(prompt, broadway_show, city):
             "SELECT showdesc FROM regionalshows WHERE showname LIKE '%The Masks of Oscar Wilde%';",
         )
     )
+    #     regional.add_example(Example("Who is in the cast of Metropolis" or "Could you give me some information about the cast of Metropolis?" or "Can you give me a list of the actors in Metropolis",""))
     regional.add_example(
         Example(
             "What is the phone number for the ticket office?"
@@ -713,9 +762,8 @@ def regionalShows(prompt, broadway_show, city):
         )
     )
     regional.add_example(Example("what is the timing for the lion king show",f"SELECT showstart,showend FROM regionalshows WHERE showname LIKE '%Lion King%' AND city LIKE '%{city}%';"))
-
-    # regional.add_example(Example("",""))
-
+    regional.add_example(Example("what's the timings for Frozen the Musical at the Theatre Royal, Drury Lane",f"SELECT showstart,showend FROM regionalshows WHERE showname LIKE '%Frozen%' AND theatrename LIKE '%Theatre Royal%' AND city LIKE '%{city}%';"))
+    regional.add_example(Example("what's the timings for Frozen the Musical at the Theatre Royal, Drury Lane London",f"SELECT showstart,showend FROM regionalshows WHERE showname LIKE '%Frozen%' AND theatrename LIKE '%Theatre Royal%' AND city LIKE '%London%';"))
     p = regional.submit_request(prompt)
 
     return p["choices"][0]["text"][8:]
@@ -729,7 +777,7 @@ def ansShows(prompt, broadway_show="", city="", people="", context=""):
     ans.add_example(
         Example(
             "what are the timings for The Lion King in London,[('Tuesdays: 7:00pm, Wednesdays: 7:00pm, Thursdays: 7:00pm, Fridays: 8:00pm, Saturdays: 2:00pm and 8:00pm, Sundays: 1:00pm and 6:30pm',)]",
-            "The timings for The Lion King show in London are as follows: Tuesdays at 7:00pm, Wednesdays at 7:00pm, Thursdays at 7:00pm, Fridays at 8:00pm, Saturdays at 2:00pm and 8:00pm, and Sundays at 1:00pm and 6:30pm. ",
+            "The timings for The Lion King show in London are as follows:<br/> Tuesdays at 7:00pm, Wednesdays at 7:00pm,<br/> Thursdays at 7:00pm,<br/> Fridays at 8:00pm,<br/> Saturdays at 2:00pm and 8:00pm,<br/> and Sundays at 1:00pm and 6:30pm. ",
         )
     )
     ans.add_example(
@@ -777,13 +825,13 @@ def ansShows(prompt, broadway_show="", city="", people="", context=""):
     ans.add_example(
         Example(
             "what is the ticket price for Jersey Boys in Adrian,[('$22-$44',)]",
-            "The ticket prices for Jersey Boys in Adrian range from $22 to $44. Please note that ticket prices may very depending on factors such as seat location and date of performance.",
+            "The ticket prices for Jersey Boys in Adrian range from $22 to $44.<br/> Please note that ticket prices may very depending on factors such as seat location and date of performance.",
         )
     )
     ans.add_example(
         Example(
             "where can I get more information about Jersey Boys,[('https://croswell.org/jerseyboys', 'https://facebook.com/thecroswell', '', 'https://instagram.com/thecroswell')]",
-            "You can find more information about Jersey Boys at the Croswell Opera House's website, which is https://croswell.org/jerseyboys. Additionally, you can check out the Croswell Opera House's social media pages on Facebook (https://facebook.com/thecroswell) and Instagram (https://instagram.com/thecroswell) for updates and news about the production.",
+            "You can find more information about Jersey Boys at the Croswell Opera House's website,<br/> which is https://croswell.org/jerseyboys.<br/> Additionally, you can check out the Croswell Opera House's social media pages on Facebook (https://facebook.com/thecroswell) and Instagram (https://instagram.com/thecroswell) for updates and news about the production.",
         )
     )
     ans.add_example(
@@ -834,18 +882,6 @@ def ansShows(prompt, broadway_show="", city="", people="", context=""):
         Example(
             "what is the start date of The Addams Family,[('',)]",
             f"Sorry but no shows are avaliable for {broadway_show} in {city}",
-        )
-    )
-    ans.add_example(
-        Example(
-            """What Broadway shows has Gurcell Henry been in?,[('Gurcell Henry is an opera singer known for her role as Clara in the 1983 Porgy and Bess revival.'),]""",
-            """ Gurcell Henry is primarily recognized for her role as Clara in the 1983 Porgy and Bess revival.""",
-        )
-    )
-    ans.add_example(
-        Example(
-            """What awards has Kristen Hahn has won?,[('Currently a swing in the Broadway production of A Gentleman\'s Guide to Love and Murder. Broadway/Westport Country Playhouse: Rebecca Gibbs in Our Town starring Paul Newman. Film/TV: "Five Flights Up" starring Diane Keaton and Morgan Freeman; "Our Town" (PBS/ Showtime). Repeat soloist with The American Classical Orchestra (NYC). Education: BFA Vocal Performance, Carnegie Mellon University. Thank you to Darko, Binder Casting, and the entire GGLAM team! Love and thanks to my family and teachers!',)]""",
-            "Kristen Hahn has not yet received any awards for her outstanding contributions to Broadway productions.",
         )
     )
     ans.add_example(
@@ -928,11 +964,17 @@ def ansShows(prompt, broadway_show="", city="", people="", context=""):
     )
     ans.add_example(
         Example(
-            """what shows are playing in London,[('The Lion King', 'Lyceum Theatre'), ('Mamma Mia!', 'Prince Edward Theatre'), ('Mamma Mia!', 'Novello Theatre'), ('The Phantom of the Opera', "Her Majesty's Theatre"), ('Wicked', 'Apollo Victoria Theatre'), ('The Woman In Black', 'Fortune Theatre'), ('The Play That Goes Wrong', 'Duchess Theatre'), ('Harry Potter and the Cursed Child: Both Parts', 'Palace Theatre'), ('Witness for the Prosecution', 'London County Hall'), ('SIX', 'Arts Theatre'), ('Come From Away', 'Phoenix Theatre'), ('Only Fools and Horses', 'Theatre Royal Haymarket '), ('SIX', 'Arts Theatre'), ('SIX', 'Lyric Theatre'), ('SIX', 'Vaudeville Theatre'), ('Frozen the Musical', 'Theatre Royal, Drury Lane'), ('& Juliet', 'Shaftesbury Theatre'), ('Sunday in the Park With George', 'Savoy Theatre'), ('Back to the Future', 'Opera House'), ('Les Miserables', 'Sondheim Theatre'), ('Life of Pi', "Wyndham's Theatre"), ('Pretty Woman', 'Piccadilly Theatre'), ('Magic Mike Live', 'London Hippodrome'), ('Cabaret', 'Playhouse Theatre')]""",
-            f"There are several shows currently playing in London. Some of the shows include:<br>- The Lion King at the Lyceum Theatre<br>- Mamma Mia! at the Prince Edward Theatre and Novello Theatre<br>- The Phantom of the Opera at Her Majesty's Theatre<br>- Wicked at the Apollo Victoria Theatre<br>- The Woman In Black at the Fortune Theatre<br>- The Play That Goes Wrong at the Duchess Theatre<br>- Harry Potter and the Cursed Child: Both Parts at the Palace Theatre<br>- Witness for the Prosecution at London County Hall<br>- SIX at the Arts Theatre, Lyric Theatre, and Vaudeville Theatre<br>- Come From Away at the Phoenix Theatre<br>- Only Fools and Horses at the Theatre Royal Haymarket<br>- Frozen the Musical at the Theatre Royal, Drury Lane<br>- & Juliet at the Shaftesbury Theatre<br>- Sunday in the Park With George at the Savoy Theatre<br>- Back to the Future at the Opera House<br>- Les Miserables at the Sondheim Theatre<br>- Life of Pi at Wyndham's Theatre<br>- Pretty Woman at the Piccadilly Theatre<br>- Magic Mike Live at the London Hippodrome<br>- Cabaret at the Playhouse Theatre",
+        """what shows are playing in London,[('The Lion King', 'Lyceum Theatre'), ('Mamma Mia!', 'Prince Edward Theatre'), ('Mamma Mia!', 'Novello Theatre'), ('The Phantom of the Opera', "Her Majesty's Theatre"), ('Wicked', 'Apollo Victoria Theatre'), ('The Woman In Black', 'Fortune Theatre'), ('The Play That Goes Wrong', 'Duchess Theatre'), ('Harry Potter and the Cursed Child: Both Parts', 'Palace Theatre'), ('Witness for the Prosecution', 'London County Hall'), ('SIX', 'Arts Theatre'), ('Come From Away', 'Phoenix Theatre'), ('Only Fools and Horses', 'Theatre Royal Haymarket '), ('SIX', 'Arts Theatre'), ('SIX', 'Lyric Theatre'), ('SIX', 'Vaudeville Theatre'), ('Frozen the Musical', 'Theatre Royal, Drury Lane'), ('& Juliet', 'Shaftesbury Theatre'), ('Sunday in the Park With George', 'Savoy Theatre'), ('Back to the Future', 'Opera House'), ('Les Miserables', 'Sondheim Theatre'), ('Life of Pi', "Wyndham's Theatre"), ('Pretty Woman', 'Piccadilly Theatre'), ('Magic Mike Live', 'London Hippodrome'), ('Cabaret', 'Playhouse Theatre')]""",
+        f"There are several shows currently playing in London. Some of the shows include:<br>- The Lion King at the Lyceum Theatre<br>- Mamma Mia! at the Prince Edward Theatre and Novello Theatre<br>- The Phantom of the Opera at Her Majesty\'s Theatre<br>- Wicked at the Apollo Victoria Theatre<br>- The Woman In Black at the Fortune Theatre<br>- The Play That Goes Wrong at the Duchess Theatre<br>- Harry Potter and the Cursed Child: Both Parts at the Palace Theatre<br>- Witness for the Prosecution at London County Hall<br>- SIX at the Arts Theatre, Lyric Theatre, and Vaudeville Theatre<br>- Come From Away at the Phoenix Theatre<br>- Only Fools and Horses at the Theatre Royal Haymarket<br>- Frozen the Musical at the Theatre Royal, Drury Lane<br>- & Juliet at the Shaftesbury Theatre<br>- Sunday in the Park With George at the Savoy Theatre<br>- Back to the Future at the Opera House<br>- Les Miserables at the Sondheim Theatre<br>- Life of Pi at Wyndham\'s Theatre<br>- Pretty Woman at the Piccadilly Theatre<br>- Magic Mike Live at the London Hippodrome<br>- Cabaret at the Playhouse Theatre"
         )
     )
-    # ans.add_example(Example("",""))
+    ans.add_example(
+        Example(
+        "where is The Orpheum Theatre,[('910 Hennepin Avenue', 'Minneapolis'), ('203 S. Main Street', 'Memphis'), ('126 Second Avenue', 'New York'), ('1192 Market Street', 'San Francisco'), ('203 West Adams St.', 'Phoenix'), ('200 N. Broadway', 'Wichita')]",
+        "There are six Orpheum Theatres located in different cities:<br/> Minneapolis at 910 Hennepin Avenue,<br/> Memphis at 203 S. Main Street,<br/> New York at 126 Second Avenue,<br/> San Francisco at 1192 Market Street,<br/> and Phoenix at 203 West Adams St.<br/> Which specific Orpheum Theatre are you referring to"
+        )
+    )
+
     # ans.add_example(Example("",""))
     p = ans.submit_request(prompt)
 
@@ -978,28 +1020,21 @@ def extraction_info(prompt):
             "The Lady Comes Across;None",
         )
     )
-    extractor.add_example(
-        Example("what are the show timings at Lyceum Theatre", "None;None")
-    )
-    extractor.add_example(
-        Example(
-            "what show is playing in Mark Hellinger Theatre New York,London",
-            "None;New York",
-        )
-    )
-    extractor.add_example(
-        Example(
-            "what are the timings for The Lion King show in Lyceum Theatre London",
-            "Lion King;London",
-        )
-    )
+    extractor.add_example(Example("what are the show timings at Lyceum Theatre","None;None"))
+    extractor.add_example(Example("what show is playing in Mark Hellinger Theatre New York,London","None;New York"))
+    extractor.add_example(Example("what are the timings for The Lion King show in Lyceum Theatre London","Lion King;London"))
     extractor.add_example(Example("what shows are playing in Adelphi Theatre","None;None"))
-    # extractor.add_example(Example("",""))
+    extractor.add_example(Example("what's the timings for Frozen the Musical at the Theatre Royal, Drury Lane","Frozen;None"))
+    extractor.add_example(Example("what's the timings for Frozen the Musical at the Theatre Royal, Drury Lane London","Frozen;London"))
+    extractor.add_example(Example("can you suggest me some Broadway shows","None;Broadway"))
+    extractor.add_example(Example("what shows are playing in West End","None;West End"))
+    extractor.add_example(Example("can you suggest me some West End shows","None;West End"))
     # extractor.add_example(Example("",""))
 
     p = extractor.submit_request(prompt)
 
     both = p["choices"][0]["text"][8:].split(";")
+    print(both)
 
     for i in range(len(both)):
         if both[i] == "None":
@@ -1172,6 +1207,7 @@ def normpeopleTable(prompt, last_people):
     match = re.search(pattern, ans)
     if match:
         new_people = match.group(1)
+        print(new_people)
     else:
         new_people = None
 
@@ -1308,8 +1344,6 @@ def columnTable(prompt, context):
     match = re.search(pattern, ans)
     if match:
         new_context = match.group(1)
-    else:
-        new_context = None
 
     return {"ans": ans, "new_context": new_context}
 
@@ -1379,10 +1413,10 @@ def castTable(prompt, broadway_show):
 
     if prodtitle:
         prodtitle = prodtitle.group(1)
+        print("########prod", prodtitle)
     return {"ans": ans, "broadway": prodtitle}
 
 
-# function to generate sql queries for authors table
 def authorTable(prompt, broadway):
     author = GPT(engine="text-davinci-003", temperature=0.2, max_tokens=250)
 
@@ -1447,7 +1481,6 @@ def authorTable(prompt, broadway):
         )
     )
     # author.add_example(Example("",""))
-    # author.add_example(Example("",""))
 
     p = author.submit_request(prompt)
     ans = p["choices"][0]["text"][8:]
@@ -1455,6 +1488,7 @@ def authorTable(prompt, broadway):
 
     if prodtitle:
         prodtitle = prodtitle.group(1)
+        print("########prod", prodtitle)
     else:
         prodtitle = None
     return {"ans": ans, "broadway": prodtitle}

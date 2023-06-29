@@ -51,6 +51,7 @@ nlu:
     - When is the next performance of The Phantom of the Opera?
     - where can I watch Rocky
     - What time is Hamilton showing this evening?
+    - what is the address of the vanue of Eleora Piano Quartet
     - What are the show timings for Dear Evan Hansen this weekend?
     - When can I catch a performance of Les Misérables this week?
     - What time does Wicked start on Friday evening?
@@ -72,6 +73,7 @@ nlu:
     - Can you give me a description of Kimberly Akimbo?
     - When does The Phantom of the Opera end its run?
     - What is the ticket price for Hamilton?
+    - what is the vanue for American String Quartet
     - Where can I buy tickets for Dear Evan Hansen?
     - What is the start date of Les Misérables?
     - When is the last performance of Wicked in [New York](place)?
@@ -132,6 +134,8 @@ nlu:
     - what are the show timings at Lyceum Theatre
     - which show is playing in Lunt-Fontanne Theatre
     - what shows I can watch in Landor Theatre London
+    - in which theatre can I watch SWINGTIME BIG BAND
+    - what are the vanues for Lydian String Quartet & Victoria Schwartzman, Piano
     - what are the current shows and their show timings in Lyric Theatre, London
     - what shows are going on in Mark Hellinger Theatre in New York
     - what show is playing in Mark Hellinger Theatre New York

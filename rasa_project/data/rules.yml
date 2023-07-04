@@ -12,6 +12,11 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: refer tour page anytime the user asks for tour_show_schedule
+  steps:
+  - intent: tour_show_schedule
+  - action: utter_tour_show_schedule
+
 - rule: context rule
   steps:
   - intent: context_setter

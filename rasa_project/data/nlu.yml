@@ -86,6 +86,7 @@ nlu:
     - What's the plot of The Masks of Oscar Wilde?
     - What's playing at Mountainside Theatre?
     - What is The Masks of Oscar Wilde about?
+    - what is Blue Man Group show
     - What is the end date of Girls in the Boat?
     - Can you give me an overview of the plot for this show?
     - How long does the performance last, roughly?
@@ -146,6 +147,29 @@ nlu:
     - any other information about St. James Theatre theatre
     - what is the box office timing of St. James Theatre (Broadway)
 
+- intent: tour_show_schedule
+  examples: |
+    - What are the tour dates for Hamilton?
+    - When is the next performance of The Lion King on tour?
+    - What cities is Dear Evan Hansen touring in?
+    - Where can I catch a show of Wicked on tour?
+    - What are the tour timings for Les Misérables this weekend?
+    - When is the next showing of The Phantom of the Opera on tour?
+    - What time does the tour of Mamma Mia start on Friday evening?
+    - Is there a tour show of Jersey Boys tonight?
+    - When is the next performance of Cats on tour?
+    - Where can I watch the tour of The Book of Mormon?
+    - Who is in the cast of the Hamilton tour?
+    - Can you provide information about the cast of The Lion King on tour?
+    - How can I get tickets for Dear Evan Hansen on tour?
+    - What is the ticket price for Wicked on tour?
+    - Are there any discounts available for Les Misérables on tour?
+    - Where can I buy tickets for The Phantom of the Opera on tour?
+    - What is the cast lineup for the Mamma Mia tour?
+    - Are there any last-minute tickets available for Jersey Boys on tour?
+    - Can I see the performance of Cats on tour with a student discount?
+    - How can I book tickets for The Book of Mormon tour?
+    
 - intent: facts
   examples: |
     - What awards has Rosie O'Donnell won?
@@ -401,6 +425,13 @@ nlu:
     - what was role of Jon Emmanuel in the show
     - What was the role of Meryl Streep in the play Doubt: A Parable?
     - Which character did Jennifer Aniston portray in the show?
+    - who is starring in Wicked on broadway
+    - Who is in the cast of Wicked on Broadway?
+    - Can you tell me the actors starring in Wicked on Broadway?
+    - Who are the current cast members of Wicked in Broadway?
+    - Which actors are performing in Wicked on Broadway?
+    - Tell me the names of the actors in the Broadway show Wicked.
+    - Who plays the lead roles in Wicked on Broadway?
     - who have worked in The Lion King?
     - what famous shows Pepita Salima worked in
 

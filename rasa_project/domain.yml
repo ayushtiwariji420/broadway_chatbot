@@ -17,6 +17,8 @@ intents:
   - columntable
   - norm
   - cast
+  - tour_show_schedule
+  - author
 
 actions:
 - action_context_set
@@ -96,6 +98,8 @@ responses:
   utter_industry_jobs:
   - text: "You can find details about industry jobs on <a href='https://www.broadwayworld.com/classifieds-jobs/'>https://www.broadwayworld.com/classifieds-jobs/</a>"
   utter_add_job:
-  - text: "You can add job listing on <a href='https://www.broadwayworld.com/classifieds-jobs/addclassifieds.cfm'>https://www.broadwayworld.com/classifieds-jobs/addclassifieds.cfm</a>https://www.broadwayworld.com/classifieds-jobs/addclassifieds.cfm"
+  - text: "You can add job listing on <a href='https://www.broadwayworld.com/classifieds-jobs/addclassifieds.cfm'>https://www.broadwayworld.com/classifieds-jobs/addclassifieds.cfm</a>"
+  utter_tour_show_schedule:
+  - text: "you can find details about tours on <a href='https://www.broadwayworld.com/shows/shows.php?page=tour'>https://www.broadwayworld.com/shows/shows.php?page=tour</a>"
 
 session: true

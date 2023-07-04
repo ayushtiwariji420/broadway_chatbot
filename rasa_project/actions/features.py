@@ -72,6 +72,7 @@ def productionTable(full_message, broadway_show, cityCode, city):
     print(query)
     try:
         data = querySearcher(query)
+        print(data)
         if len(data) == 0 and broadway_show == None:
             return "For which show"
         elif len(data) == 0 and city == None:
@@ -82,7 +83,7 @@ def productionTable(full_message, broadway_show, cityCode, city):
             Bot.slotsetter(query, data)
             return format_reply
     except:
-        prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, \nif users question is lacking some information city or show name then read users message carefully and ask user to provide whichever is lacking shortly\n if question is not about show timings then don't ask for anything sipmply say sorry for not having enough information\nyou are not supposed to provide any kind of information\n Now answer users message: {full_message}"
+        prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/ your job is not to provide information, \nif users question is lacking one information city or show name then read users message carefully and ask user to provide whichever is lacking shortly\n if question is not about show timings then don't ask for anything sipmply say sorry for not having enough information\n Now answer users question: {full_message}"
         ans = openFunction(prompt)
         return ans
 
@@ -98,7 +99,7 @@ def regionalTable(full_message, broadway_show, city):
             print(query)
             data = querySearcher(query)
     except:
-        prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, \nif users question is lacking some information city or show name then read users message carefully and ask user to provide whichever is lacking shortly\n if question is not about show timings then don't ask for anything sipmply say sorry for not having enough information\nyou are not supposed to provide any kind of information\n Now answer users message: {full_message}"
+        prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, \nif users question is lacking one information city or show name then read users message carefully and ask user to provide whichever is lacking shortly\n if question is not about show timings then don't ask for anything sipmply say sorry for not having enough information\n Now answer users message: {full_message}"
         ans = openFunction(prompt)
         return ans
     # else:
@@ -255,7 +256,7 @@ def question_formatter(prompt):
             "What Broadway shows has Rosie O'Donnell been in?",
         )
     )
-    # gpt.add_example(Example("",""))
+    gpt.add_example(Example("what west end shows has Micheal Crawford has been in","What West End shows has Michael Crawford been in?"))
     # gpt.add_example(Example("",""))
     # gpt.add_example(Example("",""))
     p = gpt.submit_request(prompt)
@@ -366,19 +367,19 @@ def productionShows(prompt, broadway_show, cityCode):
             f"""SELECT URL FROM productions WHERE prodtitle LIKE "%{broadway_show}%" AND market_type_code IN {cityCode} AND production_status_code NOT IN ('CA', 'CL') AND schedule_text is not NULL AND schedule_text <> '' LIMIT 1;""",
         )
     )
-    prod.add_example(
-        Example(
-            "can you tell me some description about the show" or "what is show about",
-            f"""SELECT tagline FROM productions WHERE prodtitle LIKE "%{broadway_show}%" AND production_status_code NOT IN ('CA', 'CL') AND tagline is not NULL AND tagline <> '' LIMIT 1;""",
-        )
-    )
-    prod.add_example(
-        Example(
-            "can you tell me about Jersey Boys"
-            or "can you tell me more about Jersey Boys show",
-            f"""SELECT tagline FROM productions WHERE prodtitle LIKE "%{broadway_show}%" AND production_status_code NOT IN ('CA', 'CL') AND tagline is not NULL AND tagline <> '' LIMIT 1;""",
-        )
-    )
+    # prod.add_example(
+    #     Example(
+    #         "can you tell me some description about the show" or "what is show about",
+    #         f"""SELECT tagline FROM productions WHERE prodtitle LIKE "%{broadway_show}%" AND production_status_code NOT IN ('CA', 'CL') AND tagline is not NULL AND tagline <> '' LIMIT 1;""",
+    #     )
+    # )
+    # prod.add_example(
+    #     Example(
+    #         "can you tell me about Jersey Boys"
+    #         or "can you tell me more about Jersey Boys show",
+    #         f"""SELECT tagline FROM productions WHERE prodtitle LIKE "%Jersey Boys%" AND production_status_code NOT IN ('CA', 'CL') AND tagline is not NULL AND tagline <> '' LIMIT 1;""",
+    #     )
+    # )
     prod.add_example(
         Example(
             "ok what's the show timing on Sunday"
@@ -391,7 +392,7 @@ def productionShows(prompt, broadway_show, cityCode):
         Example(
             "What shows are showing in New York right now?"
             or "Can you give me a list of Broadway shows in New York?",
-            f"""SELECT prodtitle, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE market_type_code IN ('NY','BR','OF','FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';""",
+            f"""SELECT prodtitle, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE market_type_code IN ('NY','BR','OF','FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '' LIMIT 30;""",
         )
     )
     prod.add_example(
@@ -568,6 +569,8 @@ def productionShows(prompt, broadway_show, cityCode):
         f'''SELECT theatrename FROM theatres_names WHERE city LIKE '%New York%' ORDER BY updated_datetime DESC LIMIT 50;'''
         )
     )
+
+    prod.add_example(Example("can you tell me about Murdered by the Mob playing at Arno Ristorante", '''SELECT tagline FROM productions WHERE prodtitle LIKE "%Murdered by the Mob%" AND production_status_code NOT IN ('CA', 'CL') AND tagline is not NULL AND tagline <> '' LIMIT 1;'''))
     
 
     p = prod.submit_request(prompt)
@@ -806,14 +809,8 @@ def ansShows(prompt, broadway_show="", city="", people="", context=""):
     )
     ans.add_example(
         Example(
-            """what shows are currently playing in Portland,[("Where's Bruno?",)]""",
-            "One of the shows currently playing in Portland is 'Where's Bruno?'.",
-        )
-    )
-    ans.add_example(
-        Example(
-            "is there any show in Seattle,[('Godspell-2012 Revised Version',), ('Fame',)]",
-            "Yes, there are currently two shows playing in Seattle - 'Godspell-2012 Revised Version' and 'Fame'.",
+            """what shows are currently playing in Portland,[("Where's Bruno?", "Duffy Theatre")]""",
+            "One of the shows currently playing in Portland is 'Where's Bruno?' at Duffu Theatre.",
         )
     )
     ans.add_example(
@@ -928,8 +925,8 @@ def ansShows(prompt, broadway_show="", city="", people="", context=""):
     )
     ans.add_example(
         Example(
-            "can you tell me more about cast of Tartuffe: Born Again,[('Mariane', 'Jane Krakowski'), ('Tartuffe', 'John Glover'), ('Orgon', 'David Schramm'), ('Dorine', 'Alison Fraser'), ('Mme. Pernelle', 'Patricia Conolly'), ('Ms. De Salle', 'Susie Duff'), ('Damis', 'Kevin Dewey'), ('Elmire', 'Haviland Morris'), ('Damis', 'Peter Rini'), ('Dorine', 'Susie Duff'), ('Elmire', 'Susie Duff'), ('Mariane', 'Jeanne Hime'), ('Mme. Pernelle', 'Angela Pietropinto'), ('Ms. De Salle', 'Angela Pietropinto'), ('Orgon', 'Tom Ligon'), ('Production Assistant', 'Jeanne Hime'), ('Visitor', 'Peter Rini'), ('Visitor', 'Tom Ligon')]",
-            "The cast of Tartuffe: Born Again includes Jane Krakowski as Mariane, John Glover as Tartuffe, David Schramm as Orgon, Alison Fraser as Dorine, Patricia Conolly as Mme. Pernelle, Susie Duff as Ms. De Salle, Kevin Dewey as Damis, Haviland Morris as Elmire, Peter Rini as Damis and Visitor, Jeanne Hime as Production Assistant, and Tom Ligon as Orgon and Visitor.",
+            "can you tell me more about cast of Tartuffe: Born Again,[('Mariane', 'Jane Krakowski'), ('Tartuffe', 'John Glover'), ('Orgon', 'David Schramm'), ('Dorine', 'Alison Fraser'), ('Mme. Pernelle', 'Patricia Conolly'), ('Ms. De Salle', 'Susie Duff'), ('Damis', 'Kevin Dewey')]",
+            "The cast of Tartuffe: Born Again includes<br/>- Jane Krakowski as Mariane,<br/>- John Glover as Tartuffe,<br/>- David Schramm as Orgon,<br/>- Alison Fraser as Dorine,<br/>- Patricia Conolly as Mme. Pernelle,<br/>- Susie Duff as Ms. De Salle,<br/>- Kevin Dewey as Damis.",
         )
     )
     ans.add_example(
@@ -964,14 +961,26 @@ def ansShows(prompt, broadway_show="", city="", people="", context=""):
     )
     ans.add_example(
         Example(
-        """what shows are playing in London,[('The Lion King', 'Lyceum Theatre'), ('Mamma Mia!', 'Prince Edward Theatre'), ('Mamma Mia!', 'Novello Theatre'), ('The Phantom of the Opera', "Her Majesty's Theatre"), ('Wicked', 'Apollo Victoria Theatre'), ('The Woman In Black', 'Fortune Theatre'), ('The Play That Goes Wrong', 'Duchess Theatre'), ('Harry Potter and the Cursed Child: Both Parts', 'Palace Theatre'), ('Witness for the Prosecution', 'London County Hall'), ('SIX', 'Arts Theatre'), ('Come From Away', 'Phoenix Theatre'), ('Only Fools and Horses', 'Theatre Royal Haymarket '), ('SIX', 'Arts Theatre'), ('SIX', 'Lyric Theatre'), ('SIX', 'Vaudeville Theatre'), ('Frozen the Musical', 'Theatre Royal, Drury Lane'), ('& Juliet', 'Shaftesbury Theatre'), ('Sunday in the Park With George', 'Savoy Theatre'), ('Back to the Future', 'Opera House'), ('Les Miserables', 'Sondheim Theatre'), ('Life of Pi', "Wyndham's Theatre"), ('Pretty Woman', 'Piccadilly Theatre'), ('Magic Mike Live', 'London Hippodrome'), ('Cabaret', 'Playhouse Theatre')]""",
-        f"There are several shows currently playing in London. Some of the shows include:<br>- The Lion King at the Lyceum Theatre<br>- Mamma Mia! at the Prince Edward Theatre and Novello Theatre<br>- The Phantom of the Opera at Her Majesty\'s Theatre<br>- Wicked at the Apollo Victoria Theatre<br>- The Woman In Black at the Fortune Theatre<br>- The Play That Goes Wrong at the Duchess Theatre<br>- Harry Potter and the Cursed Child: Both Parts at the Palace Theatre<br>- Witness for the Prosecution at London County Hall<br>- SIX at the Arts Theatre, Lyric Theatre, and Vaudeville Theatre<br>- Come From Away at the Phoenix Theatre<br>- Only Fools and Horses at the Theatre Royal Haymarket<br>- Frozen the Musical at the Theatre Royal, Drury Lane<br>- & Juliet at the Shaftesbury Theatre<br>- Sunday in the Park With George at the Savoy Theatre<br>- Back to the Future at the Opera House<br>- Les Miserables at the Sondheim Theatre<br>- Life of Pi at Wyndham\'s Theatre<br>- Pretty Woman at the Piccadilly Theatre<br>- Magic Mike Live at the London Hippodrome<br>- Cabaret at the Playhouse Theatre"
+        """what shows are playing in London,[('The Lion King', 'Lyceum Theatre'), ('Mamma Mia!', 'Prince Edward Theatre'), ('Mamma Mia!', 'Novello Theatre')]""",
+        f"There are several shows currently playing in London. Some of the shows include:<br>- The Lion King at the Lyceum Theatre<br>- Mamma Mia! at the Prince Edward Theatre and Novello Theatre"
         )
     )
     ans.add_example(
         Example(
         "where is The Orpheum Theatre,[('910 Hennepin Avenue', 'Minneapolis'), ('203 S. Main Street', 'Memphis'), ('126 Second Avenue', 'New York'), ('1192 Market Street', 'San Francisco'), ('203 West Adams St.', 'Phoenix'), ('200 N. Broadway', 'Wichita')]",
         "There are six Orpheum Theatres located in different cities:<br/> Minneapolis at 910 Hennepin Avenue,<br/> Memphis at 203 S. Main Street,<br/> New York at 126 Second Avenue,<br/> San Francisco at 1192 Market Street,<br/> and Phoenix at 203 West Adams St.<br/> Which specific Orpheum Theatre are you referring to"
+        )
+    )
+    ans.add_example(
+        Example(
+        "has Nandi Ndlovu appeard in any west end show, [('Nandi Ndlovu appeared on Broadway in Sarafina!')]",
+        "No, as of my knowledge, Nandi Ndlovu has not appeared in any West End show."
+        )
+    )
+    ans.add_example(
+        Example(
+        "what broadway show has Laura Michelle Kelly been in,[('West End: Mary Poppins (Olivier Award), The Second Mrs. Tanqueray, The Lord of the Rings, Speed The Plow, Beauty and the Beast, Les Miserables, Peter Pan, Mamma Mia!, My Fair Lady, Whistle Down the Wind. Broadway: Finding Neverland, Fiddler on the Roof, Mary Poppins. Film: Goddess, Sweeney Todd. Album: The Storm Inside.')]",
+        " Laura Michelle Kelly has been in the Broadway shows<br> Finding Neverland,<br> Fiddler on the Roof<br> Mary Poppins."
         )
     )
 
@@ -1492,3 +1501,18 @@ def authorTable(prompt, broadway):
     else:
         prodtitle = None
     return {"ans": ans, "broadway": prodtitle}
+
+
+def exceptionHandler(prompt):
+    exception = GPT(engine="text-davinci-003", temperature=0.2, max_tokens=250)
+
+    exception.add_example(Example("What is the timing for The Lion King show","The timing for The Lion King show may vary based on the location. Could you please specify the city or region where you are interested in seeing the show?"))
+    exception.add_example(Example("how can I get tickets for Wicked","Ticket availability for The Lion King can vary by location. Could you please specify the city or region where you are interested in purchasing tickets?"))
+    exception.add_example(Example("what shows are playing tonight","Which city or region are you inquiring about? I can provide you with the shows playing tonight in that specific location."))
+    exception.add_example(Example("what are the timings for the show in New York","To assist you better, could you please specify the name of the show you are interested in? Once I have the show's name, I can provide you with the timings for that particular show in New York."))
+    # exception.add_example(Example("",""))
+    # exception.add_example(Example("",""))
+
+    p = exception.submit_request(prompt)
+    ans = p["choices"][0]["text"][8:]
+    return ans

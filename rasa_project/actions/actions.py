@@ -13,7 +13,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from .features import productionTable,regionalTable,querySearcher,question_formatter,location_coder,extraction_info,openFunction
-from .features import normpeopleTable,ansShows,columnTable,castTable,authorTable,exceptionHandler,Bot
+from .features import normpeopleTable,ansShows,columnTable,castTable,authorTable,Bot
             
 
 

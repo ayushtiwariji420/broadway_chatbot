@@ -83,7 +83,7 @@ def productionTable(full_message, broadway_show, cityCode, city):
             Bot.slotsetter(query, data)
             return format_reply
     except:
-        prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/ your job is not to provide information, \nif users question is lacking one information city or show name then read users message carefully and ask user to provide whichever is lacking shortly\n if question is not about show timings then don't ask for anything sipmply say sorry for not having enough information\n Now answer users question: {full_message}"
+        prompt = f"users question: {full_message}\n do not provide any infromation if it doesn't contain city name then ask for it or if doesn't contain show name then ask for that"
         ans = openFunction(prompt)
         return ans
 
@@ -99,7 +99,7 @@ def regionalTable(full_message, broadway_show, city):
             print(query)
             data = querySearcher(query)
     except:
-        prompt = f"you are an exception handler of chatbot of https://www.broadwayworld.com/, \nif users question is lacking one information city or show name then read users message carefully and ask user to provide whichever is lacking shortly\n if question is not about show timings then don't ask for anything sipmply say sorry for not having enough information\n Now answer users message: {full_message}"
+        prompt = f"users question: {full_message}\n do not provide any infromation if it doesn't contain city name then ask for it or if doesn't contain show name then ask for that"
         ans = openFunction(prompt)
         return ans
     # else:
@@ -1503,16 +1503,3 @@ def authorTable(prompt, broadway):
     return {"ans": ans, "broadway": prodtitle}
 
 
-def exceptionHandler(prompt):
-    exception = GPT(engine="text-davinci-003", temperature=0.2, max_tokens=250)
-
-    exception.add_example(Example("What is the timing for The Lion King show","The timing for The Lion King show may vary based on the location. Could you please specify the city or region where you are interested in seeing the show?"))
-    exception.add_example(Example("how can I get tickets for Wicked","Ticket availability for The Lion King can vary by location. Could you please specify the city or region where you are interested in purchasing tickets?"))
-    exception.add_example(Example("what shows are playing tonight","Which city or region are you inquiring about? I can provide you with the shows playing tonight in that specific location."))
-    exception.add_example(Example("what are the timings for the show in New York","To assist you better, could you please specify the name of the show you are interested in? Once I have the show's name, I can provide you with the timings for that particular show in New York."))
-    # exception.add_example(Example("",""))
-    # exception.add_example(Example("",""))
-
-    p = exception.submit_request(prompt)
-    ans = p["choices"][0]["text"][8:]
-    return ans

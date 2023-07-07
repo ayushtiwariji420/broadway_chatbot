@@ -570,9 +570,18 @@ def productionShows(prompt, broadway_show, cityCode):
         )
     )
 
-    prod.add_example(Example("can you tell me about Murdered by the Mob playing at Arno Ristorante", '''SELECT tagline FROM productions WHERE prodtitle LIKE "%Murdered by the Mob%" AND production_status_code NOT IN ('CA', 'CL') AND tagline is not NULL AND tagline <> '' LIMIT 1;'''))
-    
-
+    prod.add_example(
+    Example(
+        "Can you tell me about Murdered by the Mob playing at Arno Ristorante?",
+        '''SELECT tagline FROM productions WHERE prodtitle LIKE "%Murdered by the Mob%" AND production_status_code NOT IN ('CA', 'CL') AND tagline IS NOT NULL AND tagline <> '' LIMIT 1;'''
+        )
+    )
+    prod.add_example(
+        Example(
+        "what shows are playing in West End provide with theatre names and timings",
+        f'''SELECT prodtitle, theatrename, schedule_text FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '' LIMIT 5;'''
+        )
+    )
     p = prod.submit_request(prompt)
 
     print(prod.get_example(prompt))

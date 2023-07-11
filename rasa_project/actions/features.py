@@ -539,18 +539,18 @@ def productionShows(prompt, broadway_show, cityCode):
         f'''SELECT theatrename FROM theatres_names WHERE city LIKE '%New York%' order by updated_datetime DESC LIMIT 50;'''
         )
     )
-    prod.add_example(
-        Example(
-        "can you suggest me some broadway shows",
-        f'''SELECT prodtitle FROM productions WHERE market_type_code IN ('NY','BR','OF','FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';'''
-        )
-    )
-    prod.add_example(
-        Example(
-        "can you suggest me some West End shows",
-        f'''SELECT prodtitle FROM productions WHERE market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text is not NULL AND schedule_text <> '';'''
-        )
-    )
+    # prod.add_example(
+    #     Example(
+    #     "can you suggest me some broadway shows",
+    #     f'''SELECT prodtitle FROM productions WHERE market_type_code IN ('NY','BR','OF','FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';'''
+    #     )
+    # )
+    # prod.add_example(
+    #     Example(
+    #     "can you suggest me some West End shows",
+    #     f'''SELECT prodtitle FROM productions WHERE market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text is not NULL AND schedule_text <> '';'''
+    #     )
+    # )
     prod.add_example(
         Example(
         "in which theatre",
@@ -986,13 +986,19 @@ def ansShows(prompt, broadway_show="", city="", people="", context=""):
         "No, as of my knowledge, Nandi Ndlovu has not appeared in any West End show."
         )
     )
+    # ans.add_example(
+    #     Example(
+    #     "what broadway shows has Mandy Gonzalez been in?,[('Hamilton', 2015, 'Angelica Schuyler'), ('In the Heights', 2008, 'Nina'), ('Lennon', 2005, 'Performer'), ('Wicked', 2003, 'Elphaba'), ('Dance of the Vampires', 2002, 'Sarah'), ('Aida', 2000, 'Amneris'), ('Aida', 2000, 'Amneris'), ('Aida', 2000, 'Ensemble')]",
+    #     """Mandy Gonzalez has been in several Broadway shows, including:<br/> "Hamilton" (2015, Angelica Schuyler),<br/> "In the Heights" (2008, Nina), "Lennon" (2005, Performer),<br/> "Wicked" (2003, Elphaba),<br/> "Dance of the Vampires" (2002, Sarah),<br/> "Aida" (2000, Amneris)."""
+    #     )
+    # )
+
     ans.add_example(
         Example(
-        "what broadway show has Laura Michelle Kelly been in,[('West End: Mary Poppins (Olivier Award), The Second Mrs. Tanqueray, The Lord of the Rings, Speed The Plow, Beauty and the Beast, Les Miserables, Peter Pan, Mamma Mia!, My Fair Lady, Whistle Down the Wind. Broadway: Finding Neverland, Fiddler on the Roof, Mary Poppins. Film: Goddess, Sweeney Todd. Album: The Storm Inside.')]",
-        " Laura Michelle Kelly has been in the Broadway shows<br> Finding Neverland,<br> Fiddler on the Roof<br> Mary Poppins."
+        "what shows Nandi Ndlovu been in,[('Sarafina!', 1988, 'Performer', 'BR'), ('Sarafina!', 1988, 'Nandi', 'BR'), ('Sarafina!', 1987, 'Student', 'OF')]",
+        """Nandi Ndlovu has appeared in the shows<br/> Ndlovu performed in "Sarafina!"(1988) on Broadway<br/> "Sarafina!"(1988) on Broadway, playing the role of Nandi,<br/> "Sarafina!"(1987) on Off-Broadway, playing the role of Nandi"""
         )
     )
-
     # ans.add_example(Example("",""))
     p = ans.submit_request(prompt)
 
@@ -1372,58 +1378,72 @@ def castTable(prompt, broadway_show):
     cast.add_example(
         Example(
             "can you tell me about the cast of The Lady Comes Across",
-            f"SELECT role,credited_name FROM cast WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%The Lady Comes Across%') AND role is not NULL AND role <>'' AND credited_name IS NOT NULL AND credited_name <> '' LIMIT 45;",
+            f"SELECT role, np.name, open_yr, market_type_code FROM cast JOIN productions ON cast.productions_id = productions.id JOIN normpeople np ON cast.names_id = np.normpeopleid WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%The Lady Comes Across%') LIMIT 45;",
         )
     )
     cast.add_example(
         Example(
             "Who played the role of Jean Valjean in the recent revival of Les Misérables?",
-            f"SELECT role,credited_name FROM cast WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%Les Misérables%') AND role LIKE '%Jean%' AND credited_name IS NOT NULL AND credited_name <> '' LIMIT 45;",
+            f"SELECT role, np.name, open_yr, market_type_code FROM cast JOIN productions ON cast.productions_id = productions.id JOIN normpeople np ON cast.names_id = np.normpeopleid  WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%Les Misérables%') LIMIT 45;",
         )
     )
     cast.add_example(
         Example(
             "who has done lead role in Hamilton broadway",
-            f"SELECT role,credited_name FROM cast WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%Hamilton%') AND role is not NULL AND role <>'' AND credited_name IS NOT NULL AND credited_name <> '' LIMIT 45;",
+            f"SELECT role, np.name, open_yr, market_type_code FROM cast JOIN productions ON cast.productions_id = productions.id JOIN normpeople np ON cast.names_id = np.normpeopleid WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%Hamilton%') LIMIT 45;",
         )
     )
     cast.add_example(
         Example(
             "what was the role of Harry Pedersen in The Lady Comes Across Broadway production",
-            f"SELECT role,credited_name FROM cast WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%Les Misérables%' AND market_type_code = 'BR') AND credited_name LIKE '%Harry%' AND role is not NULL AND role <>'' LIMIT 45;",
+            f"SELECT role, np.name FROM cast JOIN normpeople np ON cast.names_id = np.normpeopleid WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%Les Misérables%') AND np.name LIKE '%Harry Pedersen%'LIMIT 45;",
         )
     )
     cast.add_example(
         Example(
             "Who played Character Tony",
-            f"SELECT role,credited_name FROM cast WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%{broadway_show}%') AND role LIKE '%Tony%' AND role is not NULL AND role <>'' LIMIT 45;",
+            f"SELECT role, np.name, open_yr, market_type_code FROM cast JOIN productions ON cast.productions_id = productions.id JOIN normpeople np ON cast.names_id = np.normpeopleid WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%{broadway_show}%') AND role LIKE '%Tony%' LIMIT 45;",
         )
     )
     cast.add_example(
         Example(
-            "who played Betsy Hamilton in the show",
-            f"SELECT role,credited_name FROM cast WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%Hamilton%') AND role LIKE '%Betsy%' AND role is not NULL AND role <>'' LIMIT 45;",
+            "who played Betsy in Hamilton at Broadway",
+            f"SELECT role, np.name, open_yr, market_type_code FROM cast JOIN productions ON cast.productions_id = productions.id JOIN normpeople np ON cast.names_id = np.normpeopleid WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%Hamilton%' AND market_type_code = 'BR') AND role LIKE '%Betsy%' LIMIT 45;",
         )
     )
     cast.add_example(
         Example(
-            "which actor played Usherette in the broadway show",
-            f"SELECT role,credited_name FROM cast WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%{broadway_show}%') AND role LIKE '%Usherette%' AND role is not NULL AND role <>'' LIMIT 45;",
-        )
-    )
-    cast.add_example(
-        Example(
-            "who played the role of Aaron",
-            f"SELECT role,credited_name FROM cast WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%{broadway_show}%') AND role LIKE '%Aaron%' AND role is not NULL AND role <>'' AND credited_name IS NOT NULL AND credited_name <> '' LIMIT 45;",
+            "which actor played Usherette in the show at west end",
+            f"SELECT role, np.name, open_yr, market_type_code FROM cast JOIN normpeople np ON cast.names_id = np.normpeopleid JOIN productions ON cast.productions_id = productions.id WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%{broadway_show}%' AND market_type_code = 'WE') AND role LIKE '%Usherette%' AND role IS NOT NULL AND role <> '' LIMIT 45;",
         )
     )
     cast.add_example(
         Example(
             "just name all the crew members not their roles",
-            f"SELECT credited_name FROM cast WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%{broadway_show}%') AND credited_name IS NOT NULL AND credited_name <> '' LIMIT 45;",
+            f"SELECT role, np.name, open_yr, market_type_code FROM cast JOIN normpeople np ON cast.names_id = np.normpeopleid JOIN productions ON cast.productions_id = productions.id WHERE productions_id IN (SELECT id FROM productions WHERE prodtitle LIKE '%{broadway_show}%') AND role IS NOT NULL AND role <> '' LIMIT 45;",
+        )
+    #eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+    )
+    cast.add_example(
+    Example(
+        "What Broadway shows has Mandy Gonzalez been in?",
+        """SELECT prodtitle, open_yr, role FROM cast INNER JOIN productions ON cast.productions_id = productions.id INNER JOIN normpeople ON normpeople.clean_name LIKE "%MandyGonzalez%" WHERE cast.names_id = normpeople.normpeopleid AND market_type_code = 'BR' AND productions.status_code != 'IN' AND cast.status_code != 'IN' ORDER BY open_dt DESC, prodtitle;""",
+        )
+    
+    )
+    cast.add_example(
+        Example(
+            "What West End shows has Rosie O'Donnell been in?",
+            """SELECT prodtitle, open_yr, role FROM cast INNER JOIN productions ON cast.productions_id = productions.id INNER JOIN normpeople ON normpeople.clean_name LIKE "%RosieODonnell%" WHERE cast.names_id = normpeople.normpeopleid AND market_type_code = 'WE' AND productions.status_code != 'IN' AND cast.status_code != 'IN' ORDER BY open_dt DESC, prodtitle;""",
         )
     )
-    # cast.add_example(Example("",f""))
+    cast.add_example(
+        Example(
+            "What shows has Laura Benanti been in?",
+            """SELECT prodtitle, open_yr, role, market_type_code FROM cast INNER JOIN productions ON cast.productions_id = productions.id INNER JOIN normpeople ON normpeople.clean_name LIKE "%RosieODonnell%" WHERE cast.names_id = normpeople.normpeopleid AND productions.status_code != 'IN' AND cast.status_code != 'IN' ORDER BY open_dt DESC, prodtitle;""",
+        )
+    )
+
 
     p = cast.submit_request(prompt)
     ans = p["choices"][0]["text"][8:]

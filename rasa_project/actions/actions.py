@@ -463,6 +463,7 @@ class ActionCast(Action):
             new_broadway = query_broadway['broadway']
             # production_id = querySearcher(f"SELECT id FROM productions WHERE prodtitle LIKE '%{broadway}%' AND market_type_code = 'BR' LIMIT 1;")
             data = querySearcher(query)
+            print(data)
             final_que = full_message + f",{data}"
             format_reply = ansShows(final_que,broadway,"city")
 

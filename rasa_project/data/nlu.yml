@@ -62,6 +62,19 @@ nlu:
     - When is the Almost Famous show in [Paris](place)?
     - What time is The Lion King showing tomorrow?
     - can you suggest me any broadway
+    - can you tell me about Back to the Future show
+    - What is the plot of the show?
+    - list all the shows of Nandi Ndlovu
+    - Can you tell me about the storyline of the show?
+    - What is the premise of the show?
+    - I'm curious about the plot of the show. Can you provide some details?
+    - Tell me more about the story of the show.
+    - What is the main plotline of the show?
+    - Can you give me a brief summary of the show's plot?
+    - I'd like to know what the show is about. Can you explain?
+    - What is the central narrative of the show?
+    - Do you have any information about the plot of the show?
+    - can you tell me about Back to the Future show
     - do you any suggetions for me about broadway?
     - hey can you suggest me any broadway show that I might like?
     - is there any upcoming broadway shows that I must watch?
@@ -185,7 +198,6 @@ nlu:
 
 - intent: norm
   examples: |
-    - What Broadway shows has Mandy Gonzalez been in?
     - What is the birthplace of Rosie O'Donnell?
     - What is the gender of Kirsten Aimee?
     - What is the URL of Rosie O'Donnell?
@@ -203,42 +215,20 @@ nlu:
     - What skills does Mandy Gonzalez possess?
     - Is Kirsten Aimee associated with any theater company?
     - What is the birthplace of Rosie O'Donnell?
-    - What notable roles has Laura Bell Bundy portrayed in Broadway productions?
-    - What roles Melanie Janine Brown played in her career?
-    - did Tammy Blanchard had been in any television show?
-    - What TV shows has Tammy Blanchard done?
-    - what roles Laura Benanti played in TV shows?
-    - did Carolee Carmello recieved any awards by broadway productions?
-    - What is the Twitter handle of Ben Platt?
-    - Has Sutton Foster released any solo albums?
-    - What is the age of Andrew Rannells?
-    - What Broadway roles has Sutton Foster originated?
-    - Has Neil Patrick Harris appeared in any non-musical plays?
+    - Can you tell me about Richard Yoder?
+    - Do you have any details about Summer Stern?
+    - Is there any Broadway actor named Joseph-Vernon Banks?
+    - Who was Lynn Ahrens?
+    - When did he die?
+    - Who is Mandy Gonzalez?
+    - Can you name some great actors who worked in Mamma Mia show?
+    - What famous Broadway shows Pepita Salima worked in?
+    - Did Rosie O'Donnell work as a host?
+    - Did Robb Sapp and Billy Eichner work together?
+    - Did she receive any awards for her brilliant performances?
     - Has Hugh Jackman received any awards for his performances in Broadway productions?
-    - Has Laura Linney acted in any Broadway musicals?
-    - What television shows has Jesse Tyler Ferguson been a part of?
+    - Did Carolee Carmello receive any awards by Broadway productions?
     - Has Patti LuPone played any iconic roles in movie adaptations of Broadway musicals?
-    - What television shows has Laura Benanti appeared in?
-    - Has Laura Osnes acted in any non-musical plays?
-    - Has Norbert Leo Butz performed in any West End productions?
-    - can you tell me about Richard Yoder?
-    - do you have any details about Summer Stern?
-    - what broadway shows has Michael Carwfor been in ?
-    - what broadway shows has Laura Bell Bundy been in?
-    - what broadway shows has Melanie Janine Brown been in?
-    - what broadway shows has Tammy Blanchard been in?
-    - what do you know about Zachary J. Willis
-    - is there any broadway actor name Joseph-Vernon Banks?
-    - who was Lynn Ahrens?
-    - when did he died
-    - who is mandy gonzlena
-    - can you name some great actors who worked in Mamma Mia show
-    - what famous broadway shows Pepita Salima worked in
-    - did Rosie O'Donnel worked as a host
-    - did Robb Sapp and Billy Eichner worked together
-    - what awards has she won?
-    - in what broadways has he worked on
-    - did she recieved any awards for her brilliant performances
     
 
 - intent: name
@@ -446,6 +436,23 @@ nlu:
     - Who plays the lead roles in Wicked on Broadway?
     - who have worked in The Lion King?
     - what famous shows Pepita Salima worked in
+    - What Broadway shows has Mandy Gonzalez been in?
+    - What notable roles has Laura Bell Bundy portrayed in Broadway productions?
+    - What roles Melanie Janine Brown played in her career?
+    - Did Tammy Blanchard have been in any television show?
+    - What notable roles has Laura Benanti played in Broadway productions?
+    - What Broadway roles has Sutton Foster originated?
+    - Has Neil Patrick Harris appeared in any non-musical plays?
+    - Has Laura Linney acted in any Broadway musicals?
+    - Has Patti LuPone played any iconic roles in movie adaptations of Broadway musicals?
+    - Has Laura Osnes acted in any non-musical plays?
+    - Has Norbert Leo Butz performed in any West End productions?
+    - What West End shows has Michael Crawford been in?
+    - What West End shows has Laura Bell Bundy been in?
+    - What West End shows has Melanie Janine Brown been in?
+    - What West End shows has Tammy Blanchard been in?
+    - What famous West End shows Pepita Salima worked in?
+    - In what West End shows has he worked on?
 
 - intent: author
   examples: |

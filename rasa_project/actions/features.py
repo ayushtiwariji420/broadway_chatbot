@@ -285,7 +285,7 @@ def productionShows(prompt, broadway_show, cityCode):
             or "What are the show timings for The Lion King in West End?"
             or "What time is The Lion King showing this evening in West End?"
             or "Is there a The Lion King show tonight in West End?",
-            f"""SELECT schedule_text FROM productions WHERE prodtitle LIKE "%Lion King%" AND market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text is not NULL AND schedule_text <> '' LIMIT 1;""",
+            f"""SELECT schedule_text, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%Lion King%" AND market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';""",
         )
     )
     prod.add_example(
@@ -385,13 +385,13 @@ def productionShows(prompt, broadway_show, cityCode):
             "ok what's the show timing on Sunday"
             or "what are the show timings on monday"
             or "show timings of Friday",
-            f"""SELECT schedule_text FROM productions WHERE prodtitle LIKE "%{broadway_show}%" AND market_type_code IN {cityCode} AND production_status_code NOT IN ('CA', 'CL') AND schedule_text is not NULL AND schedule_text <> '' LIMIT 1;""",
+            f"""SELECT schedule_text, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%{broadway_show}%" AND market_type_code IN {cityCode} AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';""",
         )
     )
     prod.add_example(
         Example(
             "What shows are showing in New York right now?"
-            or "Can you give me a list of Broadway shows in New York?",
+            or "what shows are playin in new york",
             f"""SELECT prodtitle, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE market_type_code IN ('NY','BR','OF','FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '' LIMIT 30;""",
         )
     )
@@ -449,7 +449,7 @@ def productionShows(prompt, broadway_show, cityCode):
         Example(
             "isn't the show playing in Broadways"
             or "can you please confirm show timing in Broadway theatres",
-            f"""SELECT schedule_text, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%Lion King%" AND market_type_code IN ('NY','BR','OF','FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '' LIMIT 8;""",
+            f"""SELECT schedule_text, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE prodtitle LIKE "%Lion King%" AND market_type_code IN ('BR') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '' LIMIT 8;""",
         )
     )
     prod.add_example(
@@ -461,7 +461,7 @@ def productionShows(prompt, broadway_show, cityCode):
     prod.add_example(
         Example(
             "What operas are playing in off-broadways?",
-            f"""SELECT prodtitle, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE showgenre IN ('OP') AND market_type_code IN ('NY','BR','OF','FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';""",
+            f"""SELECT prodtitle, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE showgenre IN ('OP') AND market_type_code IN ('OF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';""",
         )
     )
     prod.add_example(
@@ -474,7 +474,7 @@ def productionShows(prompt, broadway_show, cityCode):
     prod.add_example(
         Example(
             "Are there any ballet shows currently playing on off-off-broadway?",
-            f"""SELECT prodtitle, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE showgenre IN ('BA') AND market_type_code IN ('NY','BR','OF','FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';""",
+            f"""SELECT prodtitle, theatrename FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE showgenre IN ('BA') AND market_type_code IN ('FF') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '';""",
         )
     )
     prod.add_example(
@@ -576,10 +576,18 @@ def productionShows(prompt, broadway_show, cityCode):
         '''SELECT tagline FROM productions WHERE prodtitle LIKE "%Murdered by the Mob%" AND production_status_code NOT IN ('CA', 'CL') AND tagline IS NOT NULL AND tagline <> '' LIMIT 1;'''
         )
     )
+    # prod.add_example(
+    #     Example(
+    #     "what shows are playing in West End provide with theatre names and timings"
+    #     or "what shows are playing in West End and on what timings"
+    #     or "what are the timings for the shows in West End",
+    #     f'''SELECT prodtitle, theatrename, schedule_text FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '' LIMIT 5;'''
+    #     )
+    # )
     prod.add_example(
         Example(
-        "what shows are playing in West End provide with theatre names and timings",
-        f'''SELECT prodtitle, theatrename, schedule_text FROM productions JOIN theatres_join ON productions.id = theatres_join.productions_id LEFT JOIN theatres_names ON theatres_names.id = theatres_join.theatres_names_id WHERE market_type_code IN ('LN','WE') AND production_status_code NOT IN ('CA', 'CL') AND schedule_text IS NOT NULL AND schedule_text <> '' LIMIT 5;'''
+        "I want list of theatres in broadway",
+        f'''SELECT theatrename FROM theatres_names WHERE city LIKE '%New York%' ORDER BY updated_datetime DESC LIMIT 50;'''
         )
     )
     p = prod.submit_request(prompt)
@@ -977,7 +985,7 @@ def ansShows(prompt, broadway_show="", city="", people="", context=""):
     ans.add_example(
         Example(
         "where is The Orpheum Theatre,[('910 Hennepin Avenue', 'Minneapolis'), ('203 S. Main Street', 'Memphis'), ('126 Second Avenue', 'New York'), ('1192 Market Street', 'San Francisco'), ('203 West Adams St.', 'Phoenix'), ('200 N. Broadway', 'Wichita')]",
-        "There are six Orpheum Theatres located in different cities:<br/> Minneapolis at 910 Hennepin Avenue,<br/> Memphis at 203 S. Main Street,<br/> New York at 126 Second Avenue,<br/> San Francisco at 1192 Market Street,<br/> and Phoenix at 203 West Adams St.<br/> Which specific Orpheum Theatre are you referring to"
+        "There are several Orpheum Theatres located in different cities:<br/> Minneapolis at 910 Hennepin Avenue,<br/> Memphis at 203 S. Main Street,<br/> New York at 126 Second Avenue,<br/> San Francisco at 1192 Market Street,<br/> and Phoenix at 203 West Adams St.<br/> Which specific Orpheum Theatre are you referring to"
         )
     )
     ans.add_example(
